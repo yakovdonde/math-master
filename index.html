@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Multiplication Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4 gap-4">
+
+    <!-- Header Section -->
+    <header class="w-full max-w-md mx-auto space-y-3 flex-none">
+        <!-- Operation Selector -->
+        <div class="flex flex-wrap justify-center gap-2">
+            <button onclick="setOperation('addition')" class="op-btn px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-slate-700" data-operation="addition" data-i18n-op="opAddition">➕ Add</button>
+            <button onclick="setOperation('subtraction')" class="op-btn px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-slate-700" data-operation="subtraction" data-i18n-op="opSubtraction">➖ Sub</button>
+            <button onclick="setOperation('multiplication')" class="op-btn px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-indigo-600 text-white" data-operation="multiplication" data-i18n-op="opMultiplication">✕ Mul</button>
+            <button onclick="setOperation('division')" class="op-btn px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-slate-700" data-operation="division" data-i18n-op="opDivision">÷ Div</button>
+        </div>
+
+        <!-- Lang Switcher -->
+        <div class="flex flex-wrap justify-center gap-1 opacity-80 hover:opacity-100 transition-opacity">
+            <button onclick="setLanguage('en')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="en">EN</button>
+            <button onclick="setLanguage('es')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="es">ES</button>
+            <button onclick="setLanguage('fr')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="fr">FR</button>
+            <button onclick="setLanguage('de')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="de">DE</button>
+            <button onclick="setLanguage('ru')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="ru">RU</button>
+            <button onclick="setLanguage('he')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="he">HE</button>
+            <button onclick="setLanguage('az')" class="lang-btn px-2 py-1 rounded-md text-[9px] font-bold bg-slate-700 transition-colors" data-lang="az">AZ</button>
+        </div>
+        
+        <!-- Score Bar -->
+        <div id="score-container" class="flex justify-between items-center px-2">
+            <div class="bg-green-600 px-3 py-1 rounded-xl shadow-lg flex items-center gap-2">
+                <span data-i18n="correctLabel" class="text-[9px] uppercase font-bold tracking-widest text-green-100">Correct</span>
+                <span id="score-correct" class="text-lg font-black game-font text-white">0</span>
+            </div>
+            <div class="bg-rose-600 px-3 py-1 rounded-xl shadow-lg flex items-center gap-2">
+                <span data-i18n="incorrectLabel" class="text-[9px] uppercase font-bold tracking-widest text-rose-100">Incorrect</span>
+                <span id="score-incorrect" class="text-lg font-black game-font text-white">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Center Game Area -->
+    <main id="game-card" class="w-full max-w-md mx-auto bg-slate-800 p-6 rounded-[2.5rem] shadow-2xl border-b-4 border-slate-900 text-center flex flex-col justify-center flex-none">
+        
+        <!-- Question View -->
+        <div id="view-question" class="space-y-4">
+            <h1 data-i18n="solveThis" class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Solve this!</h1>
+            <div id="equation" dir="ltr" class="adaptive-text game-font text-white leading-none">7 × 8</div>
+            
+            <input type="number" id="answer-input" 
+                class="w-full bg-slate-700 border-2 border-slate-600 rounded-2xl p-4 text-4xl font-black text-center text-yellow-400 focus:outline-none focus:border-indigo-500 transition-all" 
+                placeholder="?" inputmode="numeric">
+            
+            <button onclick="checkAnswer()" data-i18n="submitBtn" class="w-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 transition-all py-4 rounded-2xl text-2xl font-black game-font shadow-[0_4px_0_#4338ca]">
+                SUBMIT
+            </button>
+        </div>
+
+        <!-- Result View -->
+        <div id="view-result" class="hidden space-y-4 py-2">
+            <div id="result-icon" class="text-6xl md:text-7xl">✅</div>
+            <h2 id="result-text" class="text-3xl md:text-4xl font-black game-font uppercase italic">Correct!</h2>
+            <p id="result-details" class="text-lg text-slate-300">7 × 8 = 56</p>
+            
+            <button id="btn-continue" onclick="nextQuestion()" data-i18n="continueBtn" class="w-full bg-white text-slate-900 hover:bg-slate-100 active:scale-95 transition-all py-4 rounded-2xl text-2xl font-black game-font shadow-[0_4px_0_#cbd5e1]">
+                CONTINUE
+            </button>
+        </div>
+    </main>
+
+    <!-- Bottom History Area (Flexible height) -->
+    <section id="history-section" class="w-full max-w-md mx-auto flex flex-col min-h-0 flex-1 overflow-hidden">
+        <h3 class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-2 flex items-center px-2 flex-none">
+            <span class="mr-2">🕒</span> <span data-i18n="historyTitle">History</span>
+        </h3>
+        <div id="history-container" class="space-y-2 history-scroll overflow-y-auto px-2 pb-4">
+            <p id="history-empty" data-i18n="historyEmpty" class="text-slate-600 italic text-center text-xs py-4">Start playing!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
