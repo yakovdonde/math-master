@@ -11,41 +11,41 @@
 <body class="p-4 gap-4">
 
     <!-- Header Section -->
-    <header class="w-full max-w-4xl mx-auto space-y-3 flex-none">
+    <header class="w-full max-w-7xl mx-auto space-y-3 flex-none">
         <!-- Top Buttons Row -->
         <div class="flex items-center gap-2 min-w-0">
-            <button onclick="showLeaderboard()" data-i18n="leaderboardBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-amber-600 hover:bg-amber-500 text-white truncate">🏆 Leaderboard</button>
-            <button onclick="showAchievements()" data-i18n="achievementsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 hover:bg-indigo-500 text-white truncate">🎖️ Achievements</button>
-            <button onclick="showStatistics()" data-i18n="statsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-teal-600 hover:bg-teal-500 text-white truncate">📈 Statistics</button>
-            <button onclick="toggleSound()" id="sound-toggle-btn" data-i18n="soundToggle" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate">🔊 Sound ON</button>
+            <button onclick="showLeaderboard()" data-i18n="leaderboardBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-amber-600 hover:bg-amber-500 text-white whitespace-nowrap">🏆 Leaderboard</button>
+            <button onclick="showAchievements()" data-i18n="achievementsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 hover:bg-indigo-500 text-white whitespace-nowrap">🎖️ Achievements</button>
+            <button onclick="showStatistics()" data-i18n="statsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-teal-600 hover:bg-teal-500 text-white whitespace-nowrap">📈 Statistics</button>
+            <button onclick="toggleSound()" id="sound-toggle-btn" data-i18n="soundToggle" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white whitespace-nowrap">🔊 Sound ON</button>
             <div class="relative group flex-1">
-                <button id="difficulty-btn" data-i18n="difficultyBtn" class="w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-purple-600 hover:bg-purple-500 text-white truncate">📊 Difficulty</button>
+                <button id="difficulty-btn" data-i18n="difficultyBtn" class="w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-purple-600 hover:bg-purple-500 text-white whitespace-nowrap">📊 Difficulty</button>
                 <div id="difficulty-menu" class="hidden absolute right-0 mt-2 w-32 bg-slate-700 rounded-lg shadow-lg z-50">
                     <button onclick="setDifficulty('easy')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 rounded-t-lg" data-i18n="difficultyEasy">Easy</button>
                     <button onclick="setDifficulty('medium')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600" data-i18n="difficultyMedium">Medium</button>
                     <button onclick="setDifficulty('hard')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600 rounded-b-lg" data-i18n="difficultyHard">Hard</button>
                 </div>
             </div>
-            <button onclick="toggleTimedMode()" id="timed-mode-btn" data-i18n="timedModeBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white truncate">⏱️ Timed Mode OFF</button>
+            <button onclick="toggleTimedMode()" id="timed-mode-btn" data-i18n="timedModeBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white whitespace-nowrap">⏱️ Timed Mode OFF</button>
         </div>
         
         <!-- Operation Selector -->
         <div class="flex items-center gap-2 min-w-0">
-            <button onclick="setOperation('addition')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 truncate" data-operation="addition" data-i18n-op="opAddition">➕ Addition</button>
-            <button onclick="setOperation('subtraction')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 truncate" data-operation="subtraction" data-i18n-op="opSubtraction">➖ Subtraction</button>
-            <button onclick="setOperation('multiplication')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 text-white truncate" data-operation="multiplication" data-i18n-op="opMultiplication">✕ Multiplication</button>
-            <button onclick="setOperation('division')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 truncate" data-operation="division" data-i18n-op="opDivision">÷ Division</button>
+            <button onclick="setOperation('addition')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 whitespace-nowrap" data-operation="addition" data-i18n-op="opAddition">➕ Addition</button>
+            <button onclick="setOperation('subtraction')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 whitespace-nowrap" data-operation="subtraction" data-i18n-op="opSubtraction">➖ Subtraction</button>
+            <button onclick="setOperation('multiplication')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 text-white whitespace-nowrap" data-operation="multiplication" data-i18n-op="opMultiplication">✕ Multiplication</button>
+            <button onclick="setOperation('division')" class="op-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 whitespace-nowrap" data-operation="division" data-i18n-op="opDivision">÷ Division</button>
         </div>
 
         <!-- Lang Switcher -->
         <div class="flex items-center gap-2 min-w-0">
-            <button onclick="setLanguage('en')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="en">EN</button>
-            <button onclick="setLanguage('es')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="es">ES</button>
-            <button onclick="setLanguage('fr')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="fr">FR</button>
-            <button onclick="setLanguage('de')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="de">DE</button>
-            <button onclick="setLanguage('ru')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="ru">RU</button>
-            <button onclick="setLanguage('he')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="he">HE</button>
-            <button onclick="setLanguage('az')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600 truncate" data-lang="az">AZ</button>
+            <button onclick="setLanguage('en')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="en">EN</button>
+            <button onclick="setLanguage('es')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="es">ES</button>
+            <button onclick="setLanguage('fr')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="fr">FR</button>
+            <button onclick="setLanguage('de')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="de">DE</button>
+            <button onclick="setLanguage('ru')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="ru">RU</button>
+            <button onclick="setLanguage('he')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="he">HE</button>
+            <button onclick="setLanguage('az')" class="lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold bg-slate-700 transition-colors hover:bg-slate-600" data-lang="az">AZ</button>
         </div>
         
         <!-- Score Bar -->
@@ -62,7 +62,7 @@
     </header>
 
     <!-- Center Game Area -->
-    <main id="game-card" class="w-full max-w-4xl mx-auto bg-slate-800 p-6 rounded-[2.5rem] shadow-2xl border-b-4 border-slate-900 text-center flex flex-col justify-center flex-none">
+    <main id="game-card" class="w-full max-w-7xl mx-auto bg-slate-800 p-6 rounded-[2.5rem] shadow-2xl border-b-4 border-slate-900 text-center flex flex-col justify-center flex-none">
         
         <!-- Question View -->
         <div id="view-question" class="space-y-4">
@@ -97,7 +97,7 @@
     </main>
 
     <!-- Bottom History Area (Flexible height) -->
-    <section id="history-section" class="w-full max-w-4xl mx-auto flex flex-col min-h-0 flex-1 overflow-hidden">
+    <section id="history-section" class="w-full max-w-7xl mx-auto flex flex-col min-h-0 flex-1 overflow-hidden">
         <!-- Statistics Bar -->
         <div id="stats-bar" class="grid grid-cols-3 gap-2 mb-3 px-2">
             <div class="bg-indigo-900/50 p-2 rounded-lg text-center">
