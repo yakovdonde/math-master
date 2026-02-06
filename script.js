@@ -159,36 +159,80 @@ function setOperation(operation) {
 
 function generateProblem() {
     let a, b, answer, symbol, display;
-    let maxNum = 10;
     
-    // Adjust difficulty
-    if (difficulty === 'easy') maxNum = 5;
-    else if (difficulty === 'medium') maxNum = 10;
-    else if (difficulty === 'hard') maxNum = 15;
-    
+    // Difficulty-specific ranges for each operation
     switch(currentOperation) {
         case 'addition':
-            a = Math.floor(Math.random() * maxNum * 2) + 1;
-            b = Math.floor(Math.random() * maxNum * 2) + 1;
+            if (difficulty === 'easy') {
+                // Easy: 1-10 + 1-10 (Primary school, Grades 1-2)
+                a = Math.floor(Math.random() * 10) + 1;
+                b = Math.floor(Math.random() * 10) + 1;
+            } else if (difficulty === 'medium') {
+                // Medium: 1-20 + 1-20 (Grades 3-4)
+                a = Math.floor(Math.random() * 20) + 1;
+                b = Math.floor(Math.random() * 20) + 1;
+            } else {
+                // Hard: 1-50 + 1-50 (Grades 5-6)
+                a = Math.floor(Math.random() * 50) + 1;
+                b = Math.floor(Math.random() * 50) + 1;
+            }
             answer = a + b;
             symbol = '+';
             break;
+            
         case 'subtraction':
-            a = Math.floor(Math.random() * (maxNum * 2)) + maxNum;
-            b = Math.floor(Math.random() * maxNum) + 1;
+            if (difficulty === 'easy') {
+                // Easy: 2-10 - 1-5 (Always positive, simple subtraction)
+                a = Math.floor(Math.random() * 9) + 2;
+                b = Math.floor(Math.random() * Math.min(5, a - 1)) + 1;
+            } else if (difficulty === 'medium') {
+                // Medium: 10-30 - 1-15 (Always positive)
+                a = Math.floor(Math.random() * 21) + 10;
+                b = Math.floor(Math.random() * Math.min(15, a - 1)) + 1;
+            } else {
+                // Hard: 20-100 - 1-30 (Always positive)
+                a = Math.floor(Math.random() * 81) + 20;
+                b = Math.floor(Math.random() * Math.min(30, a - 1)) + 1;
+            }
             answer = a - b;
             symbol = '−';
             break;
+            
         case 'multiplication':
-            a = Math.floor(Math.random() * maxNum) + 1;
-            b = Math.floor(Math.random() * maxNum) + 1;
+            if (difficulty === 'easy') {
+                // Easy: 1-5 × 1-5 (Basic times tables)
+                a = Math.floor(Math.random() * 5) + 1;
+                b = Math.floor(Math.random() * 5) + 1;
+            } else if (difficulty === 'medium') {
+                // Medium: 1-10 × 1-10 (Full times tables)
+                a = Math.floor(Math.random() * 10) + 1;
+                b = Math.floor(Math.random() * 10) + 1;
+            } else {
+                // Hard: 1-15 × 1-15 (Extended times tables)
+                a = Math.floor(Math.random() * 15) + 1;
+                b = Math.floor(Math.random() * 15) + 1;
+            }
             answer = a * b;
             symbol = '×';
             break;
+            
         case 'division':
-            b = Math.floor(Math.random() * Math.min(9, maxNum - 1)) + 1;
-            answer = Math.floor(Math.random() * maxNum) + 1;
-            a = answer * b;
+            if (difficulty === 'easy') {
+                // Easy: Simple divisions, answer 1-10, divisor 2-5
+                b = Math.floor(Math.random() * 4) + 2;
+                answer = Math.floor(Math.random() * 10) + 1;
+                a = answer * b;
+            } else if (difficulty === 'medium') {
+                // Medium: Divisions, answer 1-12, divisor 2-10
+                b = Math.floor(Math.random() * 9) + 2;
+                answer = Math.floor(Math.random() * 12) + 1;
+                a = answer * b;
+            } else {
+                // Hard: Divisions, answer 1-15, divisor 2-12
+                b = Math.floor(Math.random() * 11) + 2;
+                answer = Math.floor(Math.random() * 15) + 1;
+                a = answer * b;
+            }
             symbol = '÷';
             break;
     }
