@@ -27,14 +27,6 @@
                 </div>
             </div>
             <button onclick="toggleTimedMode()" id="timed-mode-btn" data-i18n="timedModeBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white whitespace-nowrap">⏱️ Timer</button>
-            <div class="relative group flex-1">
-                <button onclick="toggleAIOpponent()" id="ai-opponent-btn" data-i18n="aiOpponentBtn" class="w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white whitespace-nowrap">🤖 AI Opponent</button>
-                <div id="ai-menu" class="hidden absolute right-0 mt-2 w-32 bg-slate-700 rounded-lg shadow-lg z-50">
-                    <button onclick="setAIDifficulty('easy')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 rounded-t-lg" data-i18n="difficultyEasy">Easy</button>
-                    <button onclick="setAIDifficulty('medium')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600" data-i18n="difficultyMedium">Medium</button>
-                    <button onclick="setAIDifficulty('hard')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600 rounded-b-lg" data-i18n="difficultyHard">Hard</button>
-                </div>
-            </div>
             <button onclick="resetGame()" data-i18n="resetBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-red-600 hover:bg-red-500 text-white whitespace-nowrap">🔄 Reset</button>
         </div>
         
@@ -59,23 +51,14 @@
         
         <!-- Score Bar -->
         <div id="score-container" class="flex justify-between items-center gap-2 px-2">
-            <div id="human-score-section" class="flex-1 bg-green-600 px-3 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
+            <div class="flex-1 bg-green-600 px-3 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
                 <span data-i18n="correctLabel" class="text-base uppercase font-bold text-green-100">Correct</span>
                 <span id="score-correct" class="text-base font-black game-font text-white">0</span>
             </div>
-            <div id="ai-score-section" class="hidden flex-1 bg-blue-600 px-3 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
-                <span class="text-base uppercase font-bold text-blue-100">AI</span>
-                <span id="score-ai" class="text-base font-black game-font text-white">0</span>
-            </div>
-            <div id="incorrect-score-section" class="flex-1 bg-rose-600 px-3 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
+            <div class="flex-1 bg-rose-600 px-3 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
                 <span data-i18n="incorrectLabel" class="text-base uppercase font-bold text-rose-100">Incorrect</span>
                 <span id="score-incorrect" class="text-base font-black game-font text-white">0</span>
             </div>
-        </div>
-        
-        <!-- AI Turn Indicator -->
-        <div id="ai-turn-indicator" class="hidden text-center mt-3 p-3 bg-blue-800 rounded-lg">
-            <p id="ai-turn-text" class="text-lg font-bold text-blue-200">Turn</p>
         </div>
     </header>
 

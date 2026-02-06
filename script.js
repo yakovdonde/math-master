@@ -1,11 +1,11 @@
 const translations = {
-    en: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Solve this!", submitBtn: "SUBMIT", continueBtn: "CONTINUE", historyTitle: "History", historyEmpty: "Start playing!", correctHeading: "Amazing!", incorrectHeading: "Oops!", isIndeed: "is", theAnswerWas: "Correct answer:", yourAnswer: "Yours", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Leaderboard", leaderboardTitle: "🏆 Leaderboard", leaderboardEmpty: "No scores yet. Play and get on the board!", playerName: "Player Name", score: "Score", operation: "Operation", enterName: "Enter your name", saveScore: "Save Score", backBtn: "← Back to Game", rank: "Rank", date: "Date", soundToggle: "🔊 Sound ON", timedModeBtn: "⏱️ Timer", timerBtn: "⏱️ Timer", timeUp: "Time's Up!", finalScore: "Final Score", difficultyBtn: "📊 Difficulty", difficultyEasy: "Easy", difficultyMedium: "Medium", difficultyHard: "Hard", achievementsBtn: "🎖️ Achievements", achievementsTitle: "🎖️ Achievements", achievementUnlocked: "Achievement Unlocked!", achievementsEmpty: "No achievements yet. Keep playing!", achievementLocked: "🔒 Locked", achievementProgress: "Progress", statsBtn: "📈 Statistics", statsTitle: "📈 Performance Statistics", totalProblems: "Total Problems", currentStreak: "Current Streak", bestStreak: "Best Streak", overallAccuracy: "Overall Accuracy", byOperation: "By Operation", byDifficulty: "By Difficulty", totalTime: "Total Time Played", avgTimePerProblem: "Avg Time / Problem", problems: "problems", seconds: "seconds", accuracyLabel: "Accuracy", totalLabel: "Total", difficultyLabel: "Difficulty", resetBtn: "🔄 Reset Session", resetConfirm: "Are you sure? This will clear your current session!", aiOpponentBtn: "🤖 AI Opponent", aiYourTurn: "Your Turn", aiAITurn: "AI Thinking...", aiAIDifficulty: "AI Difficulty", aiYourScore: "Your Score", aiOpponentScore: "AI Score" },
-    es: { dir: "ltr", correctLabel: "Correcto", incorrectLabel: "Incorrecto", solveThis: "¡Resuelve!", submitBtn: "ENVIAR", continueBtn: "CONTINUAR", historyTitle: "Historial", historyEmpty: "¡Empieza!", correctHeading: "¡Bien!", incorrectHeading: "¡Uy!", isIndeed: "es", theAnswerWas: "Era:", yourAnswer: "Tuya", resultLabel: "Res", opAddition: "➕ Suma", opSubtraction: "➖ Resta", opMultiplication: "✕ Multiplicación", opDivision: "÷ División", leaderboardBtn: "🏆 Tabla de Líderes", leaderboardTitle: "🏆 Tabla de Líderes", leaderboardEmpty: "Sin puntuaciones. ¡Juega y sube al podio!", playerName: "Nombre del Jugador", score: "Puntuación", operation: "Operación", enterName: "Ingresa tu nombre", saveScore: "Guardar Puntuación", backBtn: "← Volver al Juego", rank: "Rango", date: "Fecha", soundToggle: "🔊 Sonido ON", timedModeBtn: "⏱️ Temporizador", timerBtn: "⏱️ Temporizador", timeUp: "¡Se acabó el tiempo!", finalScore: "Puntuación Final", difficultyBtn: "📊 Dificultad", difficultyEasy: "Fácil", difficultyMedium: "Medio", difficultyHard: "Difícil", achievementsBtn: "🎖️ Logros", achievementsTitle: "🎖️ Logros", achievementUnlocked: "¡Logro Desbloqueado!", achievementsEmpty: "Sin logros. ¡Sigue jugando!", achievementLocked: "🔒 Bloqueado", achievementProgress: "Progreso", statsBtn: "📈 Estadísticas", statsTitle: "📈 Estadísticas de Rendimiento", totalProblems: "Problemas Totales", currentStreak: "Racha Actual", bestStreak: "Mejor Racha", overallAccuracy: "Precisión General", byOperation: "Por Operación", byDifficulty: "Por Dificultad", totalTime: "Tiempo Total Jugado", avgTimePerProblem: "Tiempo Promedio / Problema", problems: "problemas", seconds: "segundos", accuracyLabel: "Precisión", totalLabel: "Total", difficultyLabel: "Dificultad", resetBtn: "🔄 Reiniciar Sesión", resetConfirm: "¿Estás seguro? ¡Esto borrará tu sesión actual!", aiOpponentBtn: "🤖 Oponente IA", aiYourTurn: "Tu Turno", aiAITurn: "IA Pensando...", aiAIDifficulty: "Dificultad IA", aiYourScore: "Tu Puntuación", aiOpponentScore: "Puntuación IA" },
-    fr: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Calcule !", submitBtn: "OK", continueBtn: "SUITE", historyTitle: "Historique", historyEmpty: "Jouez !", correctHeading: "Bravo !", incorrectHeading: "Oups !", isIndeed: "est", theAnswerWas: "C'était :", yourAnswer: "Toi", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Soustraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Classement", leaderboardTitle: "🏆 Classement", leaderboardEmpty: "Aucun score. Jouez et montez au classement!", playerName: "Nom du Joueur", score: "Score", operation: "Opération", enterName: "Entrez votre nom", saveScore: "Enregistrer Score", backBtn: "← Retour au Jeu", rank: "Rang", date: "Date", soundToggle: "🔊 Son ON", timedModeBtn: "⏱️ Chronomètre", timerBtn: "⏱️ Chronomètre", timeUp: "Temps écoulé!", finalScore: "Score Final", difficultyBtn: "📊 Difficulté", difficultyEasy: "Facile", difficultyMedium: "Moyen", difficultyHard: "Difficile", achievementsBtn: "🎖️ Succès", achievementsTitle: "🎖️ Succès", achievementUnlocked: "Succès Débloqué!", achievementsEmpty: "Pas de succès. Continuez!", achievementLocked: "🔒 Verrouillé", achievementProgress: "Progrès", statsBtn: "📈 Statistiques", statsTitle: "📈 Statistiques de Performance", totalProblems: "Problèmes Totaux", currentStreak: "Série Actuelle", bestStreak: "Meilleure Série", overallAccuracy: "Précision Globale", byOperation: "Par Opération", byDifficulty: "Par Difficulté", totalTime: "Temps Total Joué", avgTimePerProblem: "Temps Moyen / Problème", problems: "problèmes", seconds: "secondes", accuracyLabel: "Précision", totalLabel: "Total", difficultyLabel: "Difficulté", resetBtn: "🔄 Réinitialiser la session", resetConfirm: "Êtes-vous sûr ? Cela effacera votre session actuelle !", aiOpponentBtn: "🤖 Adversaire IA", aiYourTurn: "Votre Tour", aiAITurn: "L'IA Réfléchit...", aiAIDifficulty: "Difficulté IA", aiYourScore: "Votre Score", aiOpponentScore: "Score IA" },
-    de: { dir: "ltr", correctLabel: "Richtig", incorrectLabel: "Falsch", solveThis: "Löse das!", submitBtn: "PRÜFEN", continueBtn: "WEITER", historyTitle: "Verlauf", historyEmpty: "Fang an!", correctHeading: "Super!", incorrectHeading: "Hoppla!", isIndeed: "ist", theAnswerWas: "War:", yourAnswer: "Du", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraktion", opMultiplication: "✕ Multiplikation", opDivision: "÷ Division", leaderboardBtn: "🏆 Rangliste", leaderboardTitle: "🏆 Rangliste", leaderboardEmpty: "Keine Punktzahl. Spiel und steige in die Liste auf!", playerName: "Spielername", score: "Punkte", operation: "Operation", enterName: "Gib deinen Namen ein", saveScore: "Punktzahl Speichern", backBtn: "← Zurück zum Spiel", rank: "Rang", date: "Datum", soundToggle: "🔊 Ton AN", timedModeBtn: "⏱️ Timer", timerBtn: "⏱️ Timer", timeUp: "Zeit vorbei!", finalScore: "Endscore", difficultyBtn: "📊 Schwierigkeit", difficultyEasy: "Einfach", difficultyMedium: "Mittel", difficultyHard: "Schwer", achievementsBtn: "🎖️ Erfolge", achievementsTitle: "🎖️ Erfolge", achievementUnlocked: "Erfolg Freigeschaltet!", achievementsEmpty: "Keine Erfolge. Spiel weiter!", achievementLocked: "🔒 Gesperrt", achievementProgress: "Fortschritt", statsBtn: "📈 Statistiken", statsTitle: "📈 Leistungsstatistiken", totalProblems: "Gesamt Aufgaben", currentStreak: "Aktuelle Serie", bestStreak: "Beste Serie", overallAccuracy: "Gesamtgenauigkeit", byOperation: "Nach Operation", byDifficulty: "Nach Schwierigkeit", totalTime: "Gesamt Spielzeit", avgTimePerProblem: "Durchschn. Zeit / Aufgabe", problems: "aufgaben", seconds: "sekunden", accuracyLabel: "Genauigkeit", totalLabel: "Gesamt", difficultyLabel: "Schwierigkeit", resetBtn: "🔄 Sitzung zurücksetzen", resetConfirm: "Sind Sie sicher? Dies löscht Ihre aktuelle Sitzung!", aiOpponentBtn: "🤖 KI-Gegner", aiYourTurn: "Dein Zug", aiAITurn: "KI Denkt...", aiAIDifficulty: "KI-Schwierigkeit", aiYourScore: "Dein Ergebnis", aiOpponentScore: "KI-Ergebnis" },
-    ru: { dir: "ltr", correctLabel: "Верно", incorrectLabel: "Неверно", solveThis: "Реши!", submitBtn: "ОК", continueBtn: "ДАЛЕЕ", historyTitle: "История", historyEmpty: "Начни игру!", correctHeading: "Верно!", incorrectHeading: "Ой!", isIndeed: "это", theAnswerWas: "Ответ:", yourAnswer: "Твой", resultLabel: "Рез", opAddition: "➕ Сложение", opSubtraction: "➖ Вычитание", opMultiplication: "✕ Умножение", opDivision: "÷ Деление", leaderboardBtn: "🏆 Таблица Лидеров", leaderboardTitle: "🏆 Таблица Лидеров", leaderboardEmpty: "Нет результатов. Играй и поднимись в таблицу!", playerName: "Имя Игрока", score: "Очки", operation: "Операция", enterName: "Введи своё имя", saveScore: "Сохранить Результат", backBtn: "← Вернуться в Игру", rank: "Место", date: "Дата", soundToggle: "🔊 Звук ВКЛ", timedModeBtn: "⏱️ Таймер", timerBtn: "⏱️ Таймер", timeUp: "Время истекло!", finalScore: "Финальный счёт", difficultyBtn: "📊 Сложность", difficultyEasy: "Легко", difficultyMedium: "Средне", difficultyHard: "Сложно", achievementsBtn: "🎖️ Достижения", achievementsTitle: "🎖️ Достижения", achievementUnlocked: "Достижение Получено!", achievementsEmpty: "Нет достижений. Продолжай!", achievementLocked: "🔒 Заблокировано", achievementProgress: "Прогресс", statsBtn: "📈 Статистика", statsTitle: "📈 Статистика Производительности", totalProblems: "Всего Задач", currentStreak: "Текущая Серия", bestStreak: "Лучшая Серия", overallAccuracy: "Общая Точность", byOperation: "По Операциям", byDifficulty: "По Сложности", totalTime: "Общее Время Игры", avgTimePerProblem: "Сред. Время / Задача", problems: "задач", seconds: "секунд", accuracyLabel: "Точность", totalLabel: "Всего", difficultyLabel: "Сложность", resetBtn: "🔄 Сброс сеанса", resetConfirm: "Вы уверены? Это удалит вашу текущую сессию!", aiOpponentBtn: "🤖 Противник ИИ", aiYourTurn: "Ваш Ход", aiAITurn: "ИИ Думает...", aiAIDifficulty: "Сложность ИИ", aiYourScore: "Ваш Счет", aiOpponentScore: "Счет ИИ" },
-    he: { dir: "rtl", correctLabel: "נכון", incorrectLabel: "טעות", solveThis: "פתרו!", submitBtn: "שלח", continueBtn: "המשך", historyTitle: "היסטוריה", historyEmpty: "בואו נשחק!", correctHeading: "כל הכבוד!", incorrectHeading: "אופס!", isIndeed: "זה", theAnswerWas: "התשובה:", yourAnswer: "שלך", resultLabel: "תוצאה", opAddition: "➕ חיבור", opSubtraction: "➖ חיסור", opMultiplication: "✕ כפל", opDivision: "÷ חילוק", leaderboardBtn: "🏆 לוח הדירוג", leaderboardTitle: "🏆 לוח הדירוג", leaderboardEmpty: "אין ניקוד. שחק והיות בלוח!", playerName: "שם השחקן", score: "ניקוד", operation: "פעולה", enterName: "הכנס את שמך", saveScore: "שמור ניקוד", backBtn: "← חזור למשחק", rank: "דירוג", date: "תאריך", soundToggle: "🔊 צליל ON", timedModeBtn: "⏱️ טיימר", timerBtn: "⏱️ טיימר", timeUp: "הזמן אזל!", finalScore: "ניקוד סופי", difficultyBtn: "📊 רמת קושי", difficultyEasy: "קל", difficultyMedium: "בינוני", difficultyHard: "קשה", achievementsBtn: "🎖️ הישגים", achievementsTitle: "🎖️ הישגים", achievementUnlocked: "הישג נפתח!", achievementsEmpty: "אין הישגים. המשך!", achievementLocked: "🔒 נעול", achievementProgress: "התקדמות", statsBtn: "📈 סטטיסטיקה", statsTitle: "📈 סטטיסטיקת ביצועים", totalProblems: "סה\"כ תרגילים", currentStreak: "רצף נוכחי", bestStreak: "רצף הכי טוב", overallAccuracy: "דיוק כללי", byOperation: "לפי פעולה", byDifficulty: "לפי קושי", totalTime: "זמן משחק כולל", avgTimePerProblem: "זמן ממוצע / תרגיל", problems: "תרגילים", seconds: "שניות", accuracyLabel: "דיוק", totalLabel: "סה\"כ", difficultyLabel: "קושי", resetBtn: "🔄 איפוס הסשן", resetConfirm: "האם אתה בטוח? זה ימחק את הסשן הנוכחי שלך!", aiOpponentBtn: "🤖 יריב ב-AI", aiYourTurn: "התור שלך", aiAITurn: "AI חושב...", aiAIDifficulty: "קושי AI", aiYourScore: "הניקוד שלך", aiOpponentScore: "ניקוד AI" },
-    az: { dir: "ltr", correctLabel: "Düz", incorrectLabel: "Səhv", solveThis: "Həll et!", submitBtn: "OK", continueBtn: "DAVAM", historyTitle: "Tarixçə", historyEmpty: "Başla!", correctHeading: "Afərin!", incorrectHeading: "Vay!", isIndeed: "budur", theAnswerWas: "Cavab:", yourAnswer: "Sənin", resultLabel: "Nət", opAddition: "➕ Toplama", opSubtraction: "➖ Çıxma", opMultiplication: "✕ Vurma", opDivision: "÷ Bölmə", leaderboardBtn: "🏆 Lider Taxtası", leaderboardTitle: "🏆 Lider Taxtası", leaderboardEmpty: "Nəticə yoxdur. Oyna və lider taxtasına çıx!", playerName: "Oyunçu Adı", score: "Xal", operation: "Əməliyyat", enterName: "Adınızı daxil edin", saveScore: "Nəticəni Yadda Saxla", backBtn: "← Oyuna Qayıt", rank: "Rütbə", date: "Tarix", soundToggle: "🔊 Səs ON", timedModeBtn: "⏱️ Taymır", timerBtn: "⏱️ Taymır", timeUp: "Vaxt bitdi!", finalScore: "Son Nəticə", difficultyBtn: "📊 Çətinlik", difficultyEasy: "Asan", difficultyMedium: "Orta", difficultyHard: "Çətin", achievementsBtn: "🎖️ Nailiyyətlər", achievementsTitle: "🎖️ Nailiyyətlər", achievementUnlocked: "Nailiyyət Açıldı!", achievementsEmpty: "Nailiyyət yoxdur. Davam et!", achievementLocked: "🔒 Kilidli", achievementProgress: "İrəliləyiş", statsBtn: "📈 Statistika", statsTitle: "📈 Performans Statistikası", totalProblems: "Cəmi Məsələlər", currentStreak: "Cəmi Seriya", bestStreak: "Ən Yaxşı Seriya", overallAccuracy: "Ümumi Dəqiqlik", byOperation: "Əməliyyatına görə", byDifficulty: "Çətinliyə görə", totalTime: "Cəmi Oyun Vaxtı", avgTimePerProblem: "Orta Vaxt / Məsələ", problems: "məsələlər", seconds: "saniyə", accuracyLabel: "Dəqiqlik", totalLabel: "Cəmi", difficultyLabel: "Çətinlik", resetBtn: "🔄 Sesionu Sıfırla", resetConfirm: "Əminsiniz? Bu cari sesinizi siləcək!", aiOpponentBtn: "🤖 AI Rəqibi", aiYourTurn: "Sizin Dövrünüz", aiAITurn: "AI Düşünür...", aiAIDifficulty: "AI Çətinliyi", aiYourScore: "Sizin Xalınız", aiOpponentScore: "AI Xalı" }
+    en: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Solve this!", submitBtn: "SUBMIT", continueBtn: "CONTINUE", historyTitle: "History", historyEmpty: "Start playing!", correctHeading: "Amazing!", incorrectHeading: "Oops!", isIndeed: "is", theAnswerWas: "Correct answer:", yourAnswer: "Yours", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Leaderboard", leaderboardTitle: "🏆 Leaderboard", leaderboardEmpty: "No scores yet. Play and get on the board!", playerName: "Player Name", score: "Score", operation: "Operation", enterName: "Enter your name", saveScore: "Save Score", backBtn: "← Back to Game", rank: "Rank", date: "Date", soundToggle: "🔊 Sound ON", timedModeBtn: "⏱️ Timer", timerBtn: "⏱️ Timer", timeUp: "Time's Up!", finalScore: "Final Score", difficultyBtn: "📊 Difficulty", difficultyEasy: "Easy", difficultyMedium: "Medium", difficultyHard: "Hard", achievementsBtn: "🎖️ Achievements", achievementsTitle: "🎖️ Achievements", achievementUnlocked: "Achievement Unlocked!", achievementsEmpty: "No achievements yet. Keep playing!", achievementLocked: "🔒 Locked", achievementProgress: "Progress", statsBtn: "📈 Statistics", statsTitle: "📈 Performance Statistics", totalProblems: "Total Problems", currentStreak: "Current Streak", bestStreak: "Best Streak", overallAccuracy: "Overall Accuracy", byOperation: "By Operation", byDifficulty: "By Difficulty", totalTime: "Total Time Played", avgTimePerProblem: "Avg Time / Problem", problems: "problems", seconds: "seconds", accuracyLabel: "Accuracy", totalLabel: "Total", difficultyLabel: "Difficulty", resetBtn: "🔄 Reset Session", resetConfirm: "Are you sure? This will clear your current session!" },
+    es: { dir: "ltr", correctLabel: "Correcto", incorrectLabel: "Incorrecto", solveThis: "¡Resuelve!", submitBtn: "ENVIAR", continueBtn: "CONTINUAR", historyTitle: "Historial", historyEmpty: "¡Empieza!", correctHeading: "¡Bien!", incorrectHeading: "¡Uy!", isIndeed: "es", theAnswerWas: "Era:", yourAnswer: "Tuya", resultLabel: "Res", opAddition: "➕ Suma", opSubtraction: "➖ Resta", opMultiplication: "✕ Multiplicación", opDivision: "÷ División", leaderboardBtn: "🏆 Tabla de Líderes", leaderboardTitle: "🏆 Tabla de Líderes", leaderboardEmpty: "Sin puntuaciones. ¡Juega y sube al podio!", playerName: "Nombre del Jugador", score: "Puntuación", operation: "Operación", enterName: "Ingresa tu nombre", saveScore: "Guardar Puntuación", backBtn: "← Volver al Juego", rank: "Rango", date: "Fecha", soundToggle: "🔊 Sonido ON", timedModeBtn: "⏱️ Temporizador", timerBtn: "⏱️ Temporizador", timeUp: "¡Se acabó el tiempo!", finalScore: "Puntuación Final", difficultyBtn: "📊 Dificultad", difficultyEasy: "Fácil", difficultyMedium: "Medio", difficultyHard: "Difícil", achievementsBtn: "🎖️ Logros", achievementsTitle: "🎖️ Logros", achievementUnlocked: "¡Logro Desbloqueado!", achievementsEmpty: "Sin logros. ¡Sigue jugando!", achievementLocked: "🔒 Bloqueado", achievementProgress: "Progreso", statsBtn: "📈 Estadísticas", statsTitle: "📈 Estadísticas de Rendimiento", totalProblems: "Problemas Totales", currentStreak: "Racha Actual", bestStreak: "Mejor Racha", overallAccuracy: "Precisión General", byOperation: "Por Operación", byDifficulty: "Por Dificultad", totalTime: "Tiempo Total Jugado", avgTimePerProblem: "Tiempo Promedio / Problema", problems: "problemas", seconds: "segundos", accuracyLabel: "Precisión", totalLabel: "Total", difficultyLabel: "Dificultad", resetBtn: "🔄 Reiniciar Sesión", resetConfirm: "¿Estás seguro? ¡Esto borrará tu sesión actual!" },
+    fr: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Calcule !", submitBtn: "OK", continueBtn: "SUITE", historyTitle: "Historique", historyEmpty: "Jouez !", correctHeading: "Bravo !", incorrectHeading: "Oups !", isIndeed: "est", theAnswerWas: "C'était :", yourAnswer: "Toi", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Soustraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Classement", leaderboardTitle: "🏆 Classement", leaderboardEmpty: "Aucun score. Jouez et montez au classement!", playerName: "Nom du Joueur", score: "Score", operation: "Opération", enterName: "Entrez votre nom", saveScore: "Enregistrer Score", backBtn: "← Retour au Jeu", rank: "Rang", date: "Date", soundToggle: "🔊 Son ON", timedModeBtn: "⏱️ Chronomètre", timerBtn: "⏱️ Chronomètre", timeUp: "Temps écoulé!", finalScore: "Score Final", difficultyBtn: "📊 Difficulté", difficultyEasy: "Facile", difficultyMedium: "Moyen", difficultyHard: "Difficile", achievementsBtn: "🎖️ Succès", achievementsTitle: "🎖️ Succès", achievementUnlocked: "Succès Débloqué!", achievementsEmpty: "Pas de succès. Continuez!", achievementLocked: "🔒 Verrouillé", achievementProgress: "Progrès", statsBtn: "📈 Statistiques", statsTitle: "📈 Statistiques de Performance", totalProblems: "Problèmes Totaux", currentStreak: "Série Actuelle", bestStreak: "Meilleure Série", overallAccuracy: "Précision Globale", byOperation: "Par Opération", byDifficulty: "Par Difficulté", totalTime: "Temps Total Joué", avgTimePerProblem: "Temps Moyen / Problème", problems: "problèmes", seconds: "secondes", accuracyLabel: "Précision", totalLabel: "Total", difficultyLabel: "Difficulté", resetBtn: "🔄 Réinitialiser la session", resetConfirm: "Êtes-vous sûr ? Cela effacera votre session actuelle !" },
+    de: { dir: "ltr", correctLabel: "Richtig", incorrectLabel: "Falsch", solveThis: "Löse das!", submitBtn: "PRÜFEN", continueBtn: "WEITER", historyTitle: "Verlauf", historyEmpty: "Fang an!", correctHeading: "Super!", incorrectHeading: "Hoppla!", isIndeed: "ist", theAnswerWas: "War:", yourAnswer: "Du", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraktion", opMultiplication: "✕ Multiplikation", opDivision: "÷ Division", leaderboardBtn: "🏆 Rangliste", leaderboardTitle: "🏆 Rangliste", leaderboardEmpty: "Keine Punktzahl. Spiel und steige in die Liste auf!", playerName: "Spielername", score: "Punkte", operation: "Operation", enterName: "Gib deinen Namen ein", saveScore: "Punktzahl Speichern", backBtn: "← Zurück zum Spiel", rank: "Rang", date: "Datum", soundToggle: "🔊 Ton AN", timedModeBtn: "⏱️ Timer", timerBtn: "⏱️ Timer", timeUp: "Zeit vorbei!", finalScore: "Endscore", difficultyBtn: "📊 Schwierigkeit", difficultyEasy: "Einfach", difficultyMedium: "Mittel", difficultyHard: "Schwer", achievementsBtn: "🎖️ Erfolge", achievementsTitle: "🎖️ Erfolge", achievementUnlocked: "Erfolg Freigeschaltet!", achievementsEmpty: "Keine Erfolge. Spiel weiter!", achievementLocked: "🔒 Gesperrt", achievementProgress: "Fortschritt", statsBtn: "📈 Statistiken", statsTitle: "📈 Leistungsstatistiken", totalProblems: "Gesamt Aufgaben", currentStreak: "Aktuelle Serie", bestStreak: "Beste Serie", overallAccuracy: "Gesamtgenauigkeit", byOperation: "Nach Operation", byDifficulty: "Nach Schwierigkeit", totalTime: "Gesamt Spielzeit", avgTimePerProblem: "Durchschn. Zeit / Aufgabe", problems: "aufgaben", seconds: "sekunden", accuracyLabel: "Genauigkeit", totalLabel: "Gesamt", difficultyLabel: "Schwierigkeit", resetBtn: "🔄 Sitzung zurücksetzen", resetConfirm: "Sind Sie sicher? Dies löscht Ihre aktuelle Sitzung!" },
+    ru: { dir: "ltr", correctLabel: "Верно", incorrectLabel: "Неверно", solveThis: "Реши!", submitBtn: "ОК", continueBtn: "ДАЛЕЕ", historyTitle: "История", historyEmpty: "Начни игру!", correctHeading: "Верно!", incorrectHeading: "Ой!", isIndeed: "это", theAnswerWas: "Ответ:", yourAnswer: "Твой", resultLabel: "Рез", opAddition: "➕ Сложение", opSubtraction: "➖ Вычитание", opMultiplication: "✕ Умножение", opDivision: "÷ Деление", leaderboardBtn: "🏆 Таблица Лидеров", leaderboardTitle: "🏆 Таблица Лидеров", leaderboardEmpty: "Нет результатов. Играй и поднимись в таблицу!", playerName: "Имя Игрока", score: "Очки", operation: "Операция", enterName: "Введи своё имя", saveScore: "Сохранить Результат", backBtn: "← Вернуться в Игру", rank: "Место", date: "Дата", soundToggle: "🔊 Звук ВКЛ", timedModeBtn: "⏱️ Таймер", timerBtn: "⏱️ Таймер", timeUp: "Время истекло!", finalScore: "Финальный счёт", difficultyBtn: "📊 Сложность", difficultyEasy: "Легко", difficultyMedium: "Средне", difficultyHard: "Сложно", achievementsBtn: "🎖️ Достижения", achievementsTitle: "🎖️ Достижения", achievementUnlocked: "Достижение Получено!", achievementsEmpty: "Нет достижений. Продолжай!", achievementLocked: "🔒 Заблокировано", achievementProgress: "Прогресс", statsBtn: "📈 Статистика", statsTitle: "📈 Статистика Производительности", totalProblems: "Всего Задач", currentStreak: "Текущая Серия", bestStreak: "Лучшая Серия", overallAccuracy: "Общая Точность", byOperation: "По Операциям", byDifficulty: "По Сложности", totalTime: "Общее Время Игры", avgTimePerProblem: "Сред. Время / Задача", problems: "задач", seconds: "секунд", accuracyLabel: "Точность", totalLabel: "Всего", difficultyLabel: "Сложность", resetBtn: "🔄 Сброс сеанса", resetConfirm: "Вы уверены? Это удалит вашу текущую сессию!" },
+    he: { dir: "rtl", correctLabel: "נכון", incorrectLabel: "טעות", solveThis: "פתרו!", submitBtn: "שלח", continueBtn: "המשך", historyTitle: "היסטוריה", historyEmpty: "בואו נשחק!", correctHeading: "כל הכבוד!", incorrectHeading: "אופס!", isIndeed: "זה", theAnswerWas: "התשובה:", yourAnswer: "שלך", resultLabel: "תוצאה", opAddition: "➕ חיבור", opSubtraction: "➖ חיסור", opMultiplication: "✕ כפל", opDivision: "÷ חילוק", leaderboardBtn: "🏆 לוח הדירוג", leaderboardTitle: "🏆 לוח הדירוג", leaderboardEmpty: "אין ניקוד. שחק והיות בלוח!", playerName: "שם השחקן", score: "ניקוד", operation: "פעולה", enterName: "הכנס את שמך", saveScore: "שמור ניקוד", backBtn: "← חזור למשחק", rank: "דירוג", date: "תאריך", soundToggle: "🔊 צליל ON", timedModeBtn: "⏱️ טיימר", timerBtn: "⏱️ טיימר", timeUp: "הזמן אזל!", finalScore: "ניקוד סופי", difficultyBtn: "📊 רמת קושי", difficultyEasy: "קל", difficultyMedium: "בינוני", difficultyHard: "קשה", achievementsBtn: "🎖️ הישגים", achievementsTitle: "🎖️ הישגים", achievementUnlocked: "הישג נפתח!", achievementsEmpty: "אין הישגים. המשך!", achievementLocked: "🔒 נעול", achievementProgress: "התקדמות", statsBtn: "📈 סטטיסטיקה", statsTitle: "📈 סטטיסטיקת ביצועים", totalProblems: "סה\"כ תרגילים", currentStreak: "רצף נוכחי", bestStreak: "רצף הכי טוב", overallAccuracy: "דיוק כללי", byOperation: "לפי פעולה", byDifficulty: "לפי קושי", totalTime: "זמן משחק כולל", avgTimePerProblem: "זמן ממוצע / תרגיל", problems: "תרגילים", seconds: "שניות", accuracyLabel: "דיוק", totalLabel: "סה\"כ", difficultyLabel: "קושי", resetBtn: "🔄 איפוס הסשן", resetConfirm: "האם אתה בטוח? זה ימחק את הסשן הנוכחי שלך!" },
+    az: { dir: "ltr", correctLabel: "Düz", incorrectLabel: "Səhv", solveThis: "Həll et!", submitBtn: "OK", continueBtn: "DAVAM", historyTitle: "Tarixçə", historyEmpty: "Başla!", correctHeading: "Afərin!", incorrectHeading: "Vay!", isIndeed: "budur", theAnswerWas: "Cavab:", yourAnswer: "Sənin", resultLabel: "Nət", opAddition: "➕ Toplama", opSubtraction: "➖ Çıxma", opMultiplication: "✕ Vurma", opDivision: "÷ Bölmə", leaderboardBtn: "🏆 Lider Taxtası", leaderboardTitle: "🏆 Lider Taxtası", leaderboardEmpty: "Nəticə yoxdur. Oyna və lider taxtasına çıx!", playerName: "Oyunçu Adı", score: "Xal", operation: "Əməliyyat", enterName: "Adınızı daxil edin", saveScore: "Nəticəni Yadda Saxla", backBtn: "← Oyuna Qayıt", rank: "Rütbə", date: "Tarix", soundToggle: "🔊 Səs ON", timedModeBtn: "⏱️ Taymır", timerBtn: "⏱️ Taymır", timeUp: "Vaxt bitdi!", finalScore: "Son Nəticə", difficultyBtn: "📊 Çətinlik", difficultyEasy: "Asan", difficultyMedium: "Orta", difficultyHard: "Çətin", achievementsBtn: "🎖️ Nailiyyətlər", achievementsTitle: "🎖️ Nailiyyətlər", achievementUnlocked: "Nailiyyət Açıldı!", achievementsEmpty: "Nailiyyət yoxdur. Davam et!", achievementLocked: "🔒 Kilidli", achievementProgress: "İrəliləyiş", statsBtn: "📈 Statistika", statsTitle: "📈 Performans Statistikası", totalProblems: "Cəmi Məsələlər", currentStreak: "Cəmi Seriya", bestStreak: "Ən Yaxşı Seriya", overallAccuracy: "Ümumi Dəqiqlik", byOperation: "Əməliyyatına görə", byDifficulty: "Çətinliyə görə", totalTime: "Cəmi Oyun Vaxtı", avgTimePerProblem: "Orta Vaxt / Məsələ", problems: "məsələlər", seconds: "saniyə", accuracyLabel: "Dəqiqlik", totalLabel: "Cəmi", difficultyLabel: "Çətinlik", resetBtn: "🔄 Sesionu Sıfırla", resetConfirm: "Əminsiniz? Bu cari sesinizi siləcək!" }
 };
 
 let currentLang = 'en';
@@ -57,13 +57,6 @@ let difficultyStats = JSON.parse(localStorage.getItem('difficultyStats')) || {
     medium: { total: 0, correct: 0 },
     hard: { total: 0, correct: 0 }
 };
-
-// AI Opponent mode
-let aiOpponentEnabled = JSON.parse(localStorage.getItem('aiOpponentEnabled')) !== false;
-let aiDifficulty = localStorage.getItem('aiDifficulty') || 'medium';
-let aiScore = 0;
-let isAITurn = false;
-let aiResponseTime = { easy: 3000, medium: 1500, hard: 800 };
 
 const elements = {
     viewQuestion: document.getElementById('view-question'),
@@ -310,15 +303,6 @@ function checkAnswer() {
     saveGameProgress();
     
     showResult(isCorrect);
-    
-    // If AI opponent is enabled, trigger AI turn after showing result
-    if (aiOpponentEnabled) {
-        const btnContinue = elements.btnContinue;
-        btnContinue.style.display = 'none';
-        setTimeout(() => {
-            simulateAIAnswer();
-        }, 2000);
-    }
 }
 
 function updateStats() {
@@ -398,8 +382,6 @@ function nextQuestion() {
     elements.viewResult.classList.add('hidden');
     elements.viewQuestion.classList.remove('hidden');
     elements.gameCard.className = elements.gameCard.className.replace(/border-(green|rose)-900/, 'border-slate-900');
-    // Restore continue button display
-    elements.btnContinue.style.display = '';
     generateProblem();
 }
 
@@ -622,109 +604,6 @@ function toggleTimedMode() {
     saveGameProgress();
 }
 
-// AI Opponent Functions
-function toggleAIOpponent() {
-    aiOpponentEnabled = !aiOpponentEnabled;
-    localStorage.setItem('aiOpponentEnabled', JSON.stringify(aiOpponentEnabled));
-    updateAIButton();
-    
-    if (aiOpponentEnabled) {
-        aiScore = 0;
-        document.getElementById('score-ai').innerText = '0';
-        document.getElementById('ai-score-section').classList.remove('hidden');
-        document.getElementById('ai-turn-indicator').classList.remove('hidden');
-        isAITurn = false;
-        updateAITurnIndicator();
-    } else {
-        document.getElementById('ai-score-section').classList.add('hidden');
-        document.getElementById('ai-turn-indicator').classList.add('hidden');
-    }
-    generateProblem();
-    elements.answerInput.focus();
-    saveGameProgress();
-}
-
-function updateAIButton() {
-    const btn = document.getElementById('ai-opponent-btn');
-    if (aiOpponentEnabled) {
-        btn.className = 'w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-cyan-600 text-white whitespace-nowrap';
-    } else {
-        btn.className = 'w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white whitespace-nowrap';
-    }
-}
-
-function setAIDifficulty(level) {
-    aiDifficulty = level;
-    localStorage.setItem('aiDifficulty', aiDifficulty);
-    closeAIMenu();
-    if (aiOpponentEnabled) {
-        generateProblem();
-    }
-}
-
-function closeAIMenu() {
-    document.getElementById('ai-menu').classList.add('hidden');
-}
-
-function updateAITurnIndicator() {
-    const t = translations[currentLang];
-    const indicator = document.getElementById('ai-turn-indicator');
-    const text = document.getElementById('ai-turn-text');
-    
-    if (!aiOpponentEnabled) {
-        indicator.classList.add('hidden');
-        return;
-    }
-    
-    if (isAITurn) {
-        indicator.classList.remove('hidden');
-        indicator.className = 'text-center mt-3 p-3 bg-blue-800 rounded-lg';
-        text.innerText = t.aiAITurn;
-        text.className = 'text-lg font-bold text-blue-200';
-    } else {
-        indicator.classList.remove('hidden');
-        indicator.className = 'text-center mt-3 p-3 bg-green-800 rounded-lg';
-        text.innerText = t.aiYourTurn;
-        text.className = 'text-lg font-bold text-green-200';
-    }
-}
-
-function simulateAIAnswer() {
-    if (!aiOpponentEnabled) return;
-    
-    isAITurn = true;
-    updateAITurnIndicator();
-    elements.answerInput.disabled = true;
-    document.querySelector('button[onclick="checkAnswer()"]').disabled = true;
-    
-    const delay = aiResponseTime[aiDifficulty];
-    const accuracy = { easy: 0.7, medium: 0.8, hard: 0.95 }[aiDifficulty];
-    
-    setTimeout(() => {
-        // AI decides whether to answer correctly based on difficulty
-        const isCorrect = Math.random() < accuracy;
-        
-        if (isCorrect) {
-            aiScore++;
-            document.getElementById('score-ai').innerText = aiScore;
-            playSound('correct');
-        } else {
-            playSound('incorrect');
-        }
-        
-        // Show result and continue
-        setTimeout(() => {
-            isAITurn = false;
-            elements.answerInput.disabled = false;
-            document.querySelector('button[onclick="checkAnswer()"]').disabled = false;
-            updateAITurnIndicator();
-            generateProblem();
-            elements.answerInput.focus();
-            saveGameProgress();
-        }, 1500);
-    }, delay);
-}
-
 // Difficulty Functions
 function setDifficulty(level) {
     difficulty = level;
@@ -753,17 +632,6 @@ function closeDifficultyMenu() {
 document.addEventListener('click', (e) => {
     const menu = document.getElementById('difficulty-menu');
     const btn = document.getElementById('difficulty-btn');
-    if (e.target === btn || btn.contains(e.target)) {
-        menu.classList.toggle('hidden');
-    } else if (!menu.contains(e.target)) {
-        menu.classList.add('hidden');
-    }
-});
-
-// Toggle AI menu
-document.addEventListener('click', (e) => {
-    const menu = document.getElementById('ai-menu');
-    const btn = document.getElementById('ai-opponent-btn');
     if (e.target === btn || btn.contains(e.target)) {
         menu.classList.toggle('hidden');
     } else if (!menu.contains(e.target)) {
@@ -1168,7 +1036,6 @@ function resetGame() {
         // Reset current session data only
         correctCount = 0;
         incorrectCount = 0;
-        aiScore = 0;
         currentProblem = { a: 0, b: 0, answer: 0, operation: '', display: '' };
         gameHistory = [];
         consecutiveCorrect = 0;
@@ -1176,7 +1043,6 @@ function resetGame() {
         // Update UI elements
         elements.scoreCorrect.innerText = '0';
         elements.scoreIncorrect.innerText = '0';
-        document.getElementById('score-ai').innerText = '0';
         elements.historyContainer.innerHTML = '';
         elements.historyEmpty.classList.remove('hidden');
         updateStats();
