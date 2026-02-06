@@ -14,6 +14,7 @@ let correctCount = 0;
 let incorrectCount = 0;
 let currentProblem = { a: 0, b: 0, answer: 0, operation: '', display: '' };
 let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+let gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || [];  // Persistent history
 let soundEnabled = JSON.parse(localStorage.getItem('soundEnabled')) !== false;
 let audioContext = null;
 let timedModeEnabled = JSON.parse(localStorage.getItem('timedModeEnabled')) !== false;
@@ -117,8 +118,26 @@ function setLanguage(lang) {
     document.getElementById('difficulty-display').innerText = config[levelKey];
     
     // Update leaderboard display if it's open
-    if (!document.getElementById('leaderboard-modal').classList.contains('hidden')) {
+    const leaderboardModal = document.getElementById('leaderboard-modal');
+    if (!leaderboardModal.classList.contains('hidden')) {
         displayLeaderboard();
+        // Update modal title and buttons
+        const modalTitle = leaderboardModal.querySelector('[data-i18n="leaderboardTitle"]');
+        const backBtn = leaderboardModal.querySelector('[data-i18n="backBtn"]');
+        if (modalTitle) modalTitle.innerText = config.leaderboardTitle;
+        if (backBtn) backBtn.innerText = config.backBtn;
+    }
+    
+    // Update achievements modal if it's open
+    const achievementsModal = document.getElementById('achievements-modal');
+    if (!achievementsModal.classList.contains('hidden')) {
+        renderAchievements();
+    }
+    
+    // Update statistics modal if it's open
+    const statisticsModal = document.getElementById('statistics-modal');
+    if (!statisticsModal.classList.contains('hidden')) {
+        renderStatistics();
     }
     
     // Save game progress when language changes
@@ -176,6 +195,9 @@ function generateProblem() {
     
     currentProblem = { a, b, answer, operation: currentOperation, display: symbol };
     elements.equationDisplay.innerText = `${a} ${symbol} ${b}`;
+    // Fix RTL display for languages like Hebrew
+    const config = translations[currentLang];
+    elements.equationDisplay.dir = config.dir === 'rtl' ? 'rtl' : 'ltr';
     elements.answerInput.value = '';
     problemStartTime = Date.now(); // Start timing this problem
     setTimeout(() => elements.answerInput.focus(), 50);
@@ -248,6 +270,10 @@ function updateStats() {
     const accuracy = total === 0 ? 0 : Math.round((correctCount / total) * 100);
     document.getElementById('accuracy-display').innerText = `${accuracy}%`;
     document.getElementById('total-display').innerText = total;
+    // Fix: Show 0% instead of '--%' on first load
+    if (total === 0) {
+        document.getElementById('accuracy-display').innerText = '0%';
+    }
 }
 
 function addToHistory(a, b, userVal, actualVal, isCorrect) {
@@ -272,6 +298,22 @@ function addToHistory(a, b, userVal, actualVal, isCorrect) {
         </div>
     `;
     elements.historyContainer.prepend(row);
+    // Auto-scroll to top to show the newest entry
+    elements.historyContainer.scrollTop = 0;
+    
+    // Save history item to persistent storage
+    const historyItem = {
+        a, b, userVal, actualVal, isCorrect,
+        operation: currentOperation,
+        difficulty: difficulty,
+        timestamp: Date.now()
+    };
+    gameHistory.unshift(historyItem);
+    // Keep only last 100 history items to prevent storage bloat
+    if (gameHistory.length > 100) {
+        gameHistory = gameHistory.slice(0, 100);
+    }
+    localStorage.setItem('gameHistory', JSON.stringify(gameHistory));
 }
 
 function showResult(isCorrect) {
@@ -335,6 +377,11 @@ function playCorrectSound() {
         gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3 + i * 0.05);
         osc.start(now + i * 0.05);
         osc.stop(now + 0.3 + i * 0.05);
+        // Fix: Properly disconnect audio nodes to prevent memory leaks
+        osc.onended = () => {
+            osc.disconnect();
+            gain.disconnect();
+        };
     });
 }
 
@@ -354,6 +401,11 @@ function playIncorrectSound() {
     buzzGain.gain.exponentialRampToValueAtTime(0.01, now + 0.6);
     buzzOsc.start(now);
     buzzOsc.stop(now + 0.6);
+    // Fix: Properly disconnect audio nodes to prevent memory leaks
+    buzzOsc.onended = () => {
+        buzzOsc.disconnect();
+        buzzGain.disconnect();
+    };
 }
 
 function playBackgroundMusic() {
@@ -373,6 +425,11 @@ function playBackgroundMusic() {
         gain.gain.exponentialRampToValueAtTime(0.01, startTime + duration * 0.9);
         osc.start(startTime);
         osc.stop(startTime + duration);
+        // Fix: Properly disconnect audio nodes to prevent memory leaks
+        osc.onended = () => {
+            osc.disconnect();
+            gain.disconnect();
+        };
     };
     
     // Play a simple melody
@@ -395,29 +452,24 @@ function toggleSound() {
     localStorage.setItem('soundEnabled', soundEnabled);
     
     const btn = document.getElementById('sound-toggle-btn');
+    const t = translations[currentLang];
+    
     if (soundEnabled) {
-        btn.textContent = '🔊 Sound ON';
+        btn.textContent = t.soundToggle.includes('ON') ? t.soundToggle : '🔊 Sound ON';
         btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate';
         playBackgroundMusic();
     } else {
-        btn.textContent = '🔇 Sound OFF';
+        btn.textContent = t.soundToggle.includes('OFF') ? t.soundToggle : '🔇 Sound OFF';
         btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-red-600 hover:bg-red-500 text-white truncate';
-    }
-    
-    // Update translations
-    const t = translations[currentLang];
-    if (btn.hasAttribute('data-i18n')) {
-        if (soundEnabled) {
-            btn.textContent = t.soundToggle.replace('OFF', 'ON');
-        } else {
-            btn.textContent = t.soundToggle.replace('ON', 'OFF');
-        }
     }
 }
 
 // Leaderboard Functions
 function showLeaderboard() {
     document.getElementById('leaderboard-modal').classList.remove('hidden');
+    // Dismiss achievement notification to avoid overlap
+    const notification = document.getElementById('achievement-notification');
+    notification.classList.add('hidden');
     displayLeaderboard();
     document.getElementById('player-name-input').focus();
 }
@@ -519,6 +571,10 @@ function setDifficulty(level) {
     updateDifficultyButton();
     closeDifficultyMenu();
     generateProblem();
+    // Ensure we're in question view to see the new problem
+    if (!elements.viewQuestion.classList.contains('hidden')) {
+        elements.answerInput.focus();
+    }
     saveGameProgress();
 }
 
@@ -543,21 +599,11 @@ document.addEventListener('click', (e) => {
     }
 });
 
-function toggleTimedMode() {
-    timedModeEnabled = !timedModeEnabled;
-    localStorage.setItem('timedModeEnabled', JSON.stringify(timedModeEnabled));
-    updateTimedModeButton();
-    if (timedModeEnabled) {
-        startTimedGame();
-    } else {
-        stopTimer();
-    }
-}
-
 function updateTimedModeButton() {
     const btn = document.getElementById('timed-mode-btn');
     const t = translations[currentLang];
-    btn.textContent = t.timerBtn;
+    // Display ON/OFF status similar to sound toggle
+    btn.textContent = `⏱️ ${t.timedModeBtn}`;
     if (timedModeEnabled) {
         btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-blue-600 hover:bg-blue-500 text-white truncate';
     } else {
@@ -635,6 +681,9 @@ function endTimedGame() {
 function showAchievements() {
     const modal = document.getElementById('achievements-modal');
     modal.classList.remove('hidden');
+    // Dismiss achievement notification to avoid overlap
+    const notification = document.getElementById('achievement-notification');
+    notification.classList.add('hidden');
     renderAchievements();
 }
 
@@ -735,6 +784,42 @@ function saveGameProgress() {
     localStorage.setItem('gameProgress', JSON.stringify(gameState));
 }
 
+function loadGameHistory() {
+    const savedHistory = localStorage.getItem('gameHistory');
+    if (savedHistory) {
+        try {
+            gameHistory = JSON.parse(savedHistory);
+            // Restore history items to the display
+            if (gameHistory.length > 0) {
+                elements.historyEmpty.classList.add('hidden');
+                gameHistory.forEach(item => {
+                    const t = translations[currentLang];
+                    const row = document.createElement('div');
+                    const isHe = currentLang === 'he';
+                    const borderClass = item.isCorrect ? (isHe ? 'border-r-4 border-green-500' : 'border-l-4 border-green-500') : (isHe ? 'border-r-4 border-rose-500' : 'border-l-4 border-rose-500');
+                    
+                    row.className = `flex items-center justify-between p-3 rounded-xl bg-slate-800/80 ${borderClass} text-xs flex-none`;
+                    row.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold text-base ${item.isCorrect ? 'text-green-400' : 'text-rose-400'}">${item.isCorrect ? '✓' : '✗'}</span>
+                            <div>
+                                <p class="font-bold text-sm" dir="ltr">${item.a} × ${item.b}</p>
+                                <p class="text-[9px] text-slate-500 uppercase">${t.yourAnswer}: ${item.userVal}</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[10px] font-bold bg-slate-900 px-2 py-1 rounded-full text-slate-300">${item.actualVal}</span>
+                        </div>
+                    `;
+                    elements.historyContainer.append(row);
+                });
+            }
+        } catch (e) {
+            console.error('Error loading game history:', e);
+        }
+    }
+}
+
 function loadGameProgress() {
     const savedState = localStorage.getItem('gameProgress');
     if (!savedState) return false;
@@ -785,11 +870,12 @@ window.onload = () => {
     // Try to load saved game progress
     const progressLoaded = loadGameProgress();
     
-    setLanguage(currentLang); 
+    setLanguage(currentLang);
     generateProblem();
     initAudioContext();
     updateTimedModeButton();
     updateDifficultyButton();
+    loadGameHistory();  // Load persistent history from previous sessions
     
     const soundBtn = document.getElementById('sound-toggle-btn');
     const t = translations[currentLang];
@@ -808,6 +894,9 @@ window.onload = () => {
 function showStatistics() {
     const modal = document.getElementById('statistics-modal');
     modal.classList.remove('hidden');
+    // Dismiss achievement notification to avoid overlap
+    const notification = document.getElementById('achievement-notification');
+    notification.classList.add('hidden');
     renderStatistics();
 }
 
@@ -886,10 +975,14 @@ function renderStatistics() {
         difficultyContainer.appendChild(div);
     });
     
-    // Time stats
-    const totalTimeSeconds = Math.round(totalTimePlayed);
-    const avgTime = totalProblemsAnswered === 0 ? 0 : Math.round(totalTimePlayed / totalProblemsAnswered);
+    // Time stats - with proper validation
+    const totalTimeSeconds = Math.round(Math.max(0, totalTimePlayed));
+    const avgTime = totalProblemsAnswered === 0 ? 0 : Math.round(Math.max(0, totalTimePlayed / totalProblemsAnswered));
     
-    document.getElementById('stat-total-time').innerHTML = `${totalTimeSeconds} <span data-i18n="seconds" class="text-base">${t.seconds}</span>`;
-    document.getElementById('stat-avg-time').innerHTML = `${avgTime} <span data-i18n="seconds" class="text-base">${t.seconds}</span>`;
+    // Ensure values are valid numbers
+    const displayTotalTime = isFinite(totalTimeSeconds) ? totalTimeSeconds : 0;
+    const displayAvgTime = isFinite(avgTime) ? avgTime : 0;
+    
+    document.getElementById('stat-total-time').innerHTML = `${displayTotalTime} <span data-i18n="seconds" class="text-base">${t.seconds}</span>`;
+    document.getElementById('stat-avg-time').innerHTML = `${displayAvgTime} <span data-i18n="seconds" class="text-base">${t.seconds}</span>`;
 }
