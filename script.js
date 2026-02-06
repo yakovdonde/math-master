@@ -67,7 +67,7 @@ function setLanguage(lang) {
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         const isActive = btn.getAttribute('data-lang') === lang;
-        btn.className = `lang-btn px-2 py-1 rounded-md text-[9px] font-bold transition-colors ${isActive ? 'bg-indigo-600 text-white' : 'bg-slate-700 text-slate-400'}`;
+        btn.className = `lang-btn flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors hover:bg-slate-600 truncate ${isActive ? 'bg-indigo-600 text-white' : 'bg-slate-700 text-slate-400'}`;
     });
     
     // Update timed mode button with new language
@@ -310,11 +310,11 @@ function toggleSound() {
     const btn = document.getElementById('sound-toggle-btn');
     if (soundEnabled) {
         btn.textContent = '🔊 Sound ON';
-        btn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-green-600 hover:bg-green-500 text-white';
+        btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate';
         playBackgroundMusic();
     } else {
         btn.textContent = '🔇 Sound OFF';
-        btn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-red-600 hover:bg-red-500 text-white';
+        btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-red-600 hover:bg-red-500 text-white truncate';
     }
     
     // Update translations
@@ -472,10 +472,10 @@ function updateTimedModeButton() {
     const baseText = t.timedModeBtn;
     if (timedModeEnabled) {
         btn.textContent = baseText.replace('OFF', 'ON');
-        btn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-blue-600 hover:bg-blue-500 text-white';
+        btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-blue-600 hover:bg-blue-500 text-white truncate';
     } else {
         btn.textContent = baseText.replace('ON', 'OFF');
-        btn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white';
+        btn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white truncate';
     }
 }
 
@@ -556,9 +556,9 @@ window.onload = () => {
     const t = translations['en'];
     if (soundEnabled) {
         soundBtn.textContent = t.soundToggle.replace('OFF', 'ON');
-        soundBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-green-600 hover:bg-green-500 text-white';
+        soundBtn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate';
     } else {
         soundBtn.textContent = t.soundToggle.replace('ON', 'OFF');
-        soundBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-red-600 hover:bg-red-500 text-white';
+        soundBtn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-red-600 hover:bg-red-500 text-white truncate';
     }
 };

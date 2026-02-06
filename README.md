@@ -41,7 +41,7 @@ A sleek, interactive math game designed for primary school students to practice 
    - Upload to a web server for online access
 
 3. **Start playing**
-   - Select your preferred operation (Add, Sub, Mul, Div)
+   - Select your preferred operation (Addition, Subtraction, Multiplication, Division)
    - Choose your language
    - Solve the math problems
    - Watch your score grow!
@@ -66,7 +66,7 @@ math-master/
 
 ## 📖 How to Play
 
-1. **Select an Operation**: Click one of the operation buttons (Add, Sub, Mul, Div)
+1. **Select an Operation**: Click one of the operation buttons (Addition, Subtraction, Multiplication, Division)
 2. **Choose Your Language**: Pick from 7 available languages
 3. **Solve the Problem**: Read the equation and enter your answer
 4. **Submit Your Answer**: Click the SUBMIT button or press Enter
@@ -110,6 +110,8 @@ The game adapts beautifully to any screen size:
 - **Typography**: Bold, playful fonts for an engaging experience
 - **Animations**: Smooth transitions and pop-in effects for visual feedback
 - **Accessibility**: Clear contrast ratios and intuitive controls
+- **Unified Button Design**: All control buttons sized consistently for visual harmony
+- **Full Operation Names**: Complete operation names displayed in all 7 languages (Addition, Subtraction, Multiplication, Division)
 
 ## ⌨️ Keyboard Shortcuts
 
