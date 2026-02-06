@@ -115,7 +115,9 @@ The game adapts beautifully to any screen size:
 - **Animations**: Smooth transitions and pop-in effects for visual feedback
 - **Accessibility**: Clear contrast ratios and intuitive controls
 - **Unified Button Design**: All control buttons sized consistently for visual harmony
+- **Full Button Titles**: All button labels fully visible including Leaderboard, Achievements, Statistics, Difficulty, and Timed Mode
 - **Full Operation Names**: Complete operation names displayed in all 7 languages (Addition, Subtraction, Multiplication, Division)
+- **Responsive Layout**: Widened container design to accommodate full text on desktop devices while maintaining mobile responsiveness
 
 ## ⌨️ Keyboard Shortcuts
 
@@ -149,7 +151,7 @@ The game adapts beautifully to any screen size:
 - 🌐 **Multilingual Labels**: Sound toggle button text updates with language selection
 
 ### Timed Challenges
-- ⏱️ **Timed Mode Toggle**: Turn timed challenges ON/OFF with dedicated button (blue when active, gray when inactive)
+- ⏱️ **Timed Mode Toggle**: Turn timed challenges ON/OFF with dedicated button displaying "Timer" in all languages (blue when active, slate when inactive)
 - 📈 **60-Second Countdown**: Solve as many problems as possible within the time limit
 - 🎨 **Dynamic Timer Display**: Yellow countdown timer above the equation, turns red when 10 seconds remain
 - 🏁 **Game End**: Automatic game over when timer reaches zero with final score display
@@ -249,7 +251,7 @@ This demonstrates:
 
 Potential features to add:
 - 🏆 Leaderboard system (✅ **COMPLETED**)
-- 📊 Statistics dashboard with performance tracking
+- 📊 Statistics dashboard with performance tracking (✅ **COMPLETED**)
 - ⏱️ Timed challenges (✅ **COMPLETED**)
 - 🎖️ Achievement badges (✅ **COMPLETED**)
 - 🎵 Sound effects and background music (✅ **COMPLETED**)
