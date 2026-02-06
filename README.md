@@ -189,6 +189,20 @@ The game adapts beautifully to any screen size:
 - 💾 **Persistent History**: All statistics are saved in browser localStorage across sessions
 - 🌐 **Multilingual**: All statistics labels and units translated to 7 languages
 
+### Game Progress Save/Load
+- 💾 **Automatic Save**: Game progress is automatically saved every 5 seconds while playing
+- 🔄 **Auto-Load**: When you return to the game, your previous progress is automatically restored
+- 📝 **Comprehensive Save**: Saves all game state including:
+  - Current operation and language selection
+  - Score (correct and incorrect counts)
+  - Difficulty level setting
+  - Streaks and statistics
+  - Achievement progress
+  - Sound preferences
+  - Timed mode settings
+- 💡 **Seamless Experience**: Continue exactly where you left off without any manual saving required
+- 🛡️ **Safe Storage**: All progress is securely stored in browser localStorage
+
 ## 🔧 Customization
 
 Want to customize the difficulty or appearance? Here are some key modifications:
@@ -255,7 +269,7 @@ Potential features to add:
 - ⏱️ Timed challenges (✅ **COMPLETED**)
 - 🎖️ Achievement badges (✅ **COMPLETED**)
 - 🎵 Sound effects and background music (✅ **COMPLETED**)
-- 💾 Save/load game progress
+- 💾 Save/load game progress (✅ **COMPLETED**)
 - 📈 Difficulty levels (Easy, Medium, Hard) (✅ **COMPLETED**)
 - 🤖 AI opponent mode
 
