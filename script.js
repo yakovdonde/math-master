@@ -86,10 +86,6 @@ const operationSymbols = {
 function setLanguage(lang) {
     currentLang = lang;
     const config = translations[lang];
-    document.body.dir = config.dir;
-    elements.gameCard.dir = config.dir;
-    elements.historySection.dir = config.dir;
-    elements.scoreContainer.dir = config.dir;
 
     // Track language used for achievement
     trackLanguageUsed(lang);
