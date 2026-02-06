@@ -26,6 +26,7 @@ A sleek, interactive math game designed for primary school students to practice 
 - **🎖️ Achievement Badges**: Unlock rewards for various milestones and challenges
 - **📊 Difficulty Levels**: Choose between Easy, Medium, and Hard modes
 - **💾 Auto-Save/Load**: Automatic game progress saving and restoration
+- **🤖 AI Opponent Mode**: Challenge an AI opponent in turn-based competition with adjustable difficulty
 
 ## 🚀 Quick Start
 
@@ -204,6 +205,19 @@ The game adapts beautifully to any screen size:
 - 💡 **Seamless Experience**: Continue exactly where you left off without any manual saving required
 - 🛡️ **Safe Storage**: All progress is securely stored in browser localStorage
 
+### AI Opponent Mode
+- 🤖 **Challenge Mode**: Take turns answering problems against an AI opponent
+- 🎮 **Turn-Based Gameplay**: Player answers a problem, then the AI responds with its own attempt
+- 📊 **Dual Score Tracking**: Track both your score and the AI's score side-by-side
+- 🎯 **AI Difficulty Levels**: Choose from three AI difficulty settings:
+  - **Easy**: AI answers correctly 70% of the time with a 3-second thinking delay
+  - **Medium**: AI answers correctly 80% of the time with a 1.5-second thinking delay
+  - **Hard**: AI answers correctly 95% of the time with an 0.8-second thinking delay
+- 🔔 **Turn Indicator**: Clear visual indicator showing whose turn it is (Your Turn or AI Thinking...)
+- 💾 **Persistent Preference**: AI opponent mode settings saved in browser localStorage
+- 🌐 **Multilingual**: All AI opponent text fully translated to 7 languages
+- 🏆 **Competitive Component**: Add a competitive element to your practice sessions
+
 ## 🔧 Customization
 
 Want to customize the difficulty or appearance? Here are some key modifications:
@@ -272,7 +286,7 @@ Potential features to add:
 - 🎵 Sound effects and background music (✅ **COMPLETED**)
 - 💾 Save/load game progress (✅ **COMPLETED**)
 - 📈 Difficulty levels (Easy, Medium, Hard) (✅ **COMPLETED**)
-- 🤖 AI opponent mode
+- 🤖 AI opponent mode (✅ **COMPLETED**)
 
 ## 📞 Contact & Support
 
