@@ -15,6 +15,7 @@
         <!-- Top Buttons Row -->
         <div class="flex items-center gap-2 min-w-0">
             <button onclick="showLeaderboard()" data-i18n="leaderboardBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-amber-600 hover:bg-amber-500 text-white truncate">🏆 Leaderboard</button>
+            <button onclick="showAchievements()" data-i18n="achievementsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 hover:bg-indigo-500 text-white truncate">🎖️ Achievements</button>
             <button onclick="toggleSound()" id="sound-toggle-btn" data-i18n="soundToggle" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate">🔊 Sound ON</button>
             <div class="relative group flex-1">
                 <button id="difficulty-btn" data-i18n="difficultyBtn" class="w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-purple-600 hover:bg-purple-500 text-white truncate">📊 Difficulty</button>
@@ -145,6 +146,36 @@
 
             <!-- Back Button -->
             <button onclick="hideLeaderboard()" data-i18n="backBtn" class="w-full mt-6 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold">← Back to Game</button>
+        </div>
+    </div>
+
+    <!-- Achievements Modal (Hidden by default) -->
+    <div id="achievements-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-slate-900 rounded-[2.5rem] p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto border-b-4 border-slate-800">
+            <!-- Achievements Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 data-i18n="achievementsTitle" class="text-3xl font-black game-font text-indigo-400">🎖️ Achievements</h2>
+                <button onclick="hideAchievements()" class="text-slate-400 hover:text-white text-2xl">✕</button>
+            </div>
+
+            <!-- Achievements Grid -->
+            <div id="achievements-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Achievements will be inserted here -->
+            </div>
+
+            <!-- Back Button -->
+            <button onclick="hideAchievements()" data-i18n="backBtn" class="w-full mt-6 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold">← Back to Game</button>
+        </div>
+    </div>
+
+    <!-- Achievement Notification -->
+    <div id="achievement-notification" class="hidden fixed top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white p-4 rounded-xl shadow-2xl z-[60] max-w-sm pop-in">
+        <div class="flex items-center gap-3">
+            <div class="text-4xl">🎖️</div>
+            <div>
+                <p data-i18n="achievementUnlocked" class="font-black text-sm">Achievement Unlocked!</p>
+                <p id="achievement-notification-text" class="text-sm font-bold">First Steps</p>
+            </div>
         </div>
     </div>
 

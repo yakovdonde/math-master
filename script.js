@@ -1,11 +1,11 @@
 const translations = {
-    en: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Solve this!", submitBtn: "SUBMIT", continueBtn: "CONTINUE", historyTitle: "History", historyEmpty: "Start playing!", correctHeading: "Amazing!", incorrectHeading: "Oops!", isIndeed: "is", theAnswerWas: "Correct answer:", yourAnswer: "Yours", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Leaderboard", leaderboardTitle: "🏆 Leaderboard", leaderboardEmpty: "No scores yet. Play and get on the board!", playerName: "Player Name", score: "Score", operation: "Operation", enterName: "Enter your name", saveScore: "Save Score", backBtn: "← Back to Game", rank: "Rank", date: "Date", soundToggle: "🔊 Sound ON", timedModeBtn: "⏱️ Timed Mode OFF", timeUp: "Time's Up!", finalScore: "Final Score", difficultyBtn: "📊 Difficulty", difficultyEasy: "Easy", difficultyMedium: "Medium", difficultyHard: "Hard" },
-    es: { dir: "ltr", correctLabel: "Correcto", incorrectLabel: "Incorrecto", solveThis: "¡Resuelve!", submitBtn: "ENVIAR", continueBtn: "CONTINUAR", historyTitle: "Historial", historyEmpty: "¡Empieza!", correctHeading: "¡Bien!", incorrectHeading: "¡Uy!", isIndeed: "es", theAnswerWas: "Era:", yourAnswer: "Tuya", resultLabel: "Res", opAddition: "➕ Suma", opSubtraction: "➖ Resta", opMultiplication: "✕ Multiplicación", opDivision: "÷ División", leaderboardBtn: "🏆 Tabla de Líderes", leaderboardTitle: "🏆 Tabla de Líderes", leaderboardEmpty: "Sin puntuaciones. ¡Juega y sube al podio!", playerName: "Nombre del Jugador", score: "Puntuación", operation: "Operación", enterName: "Ingresa tu nombre", saveScore: "Guardar Puntuación", backBtn: "← Volver al Juego", rank: "Rango", date: "Fecha", soundToggle: "🔊 Sonido ON", timedModeBtn: "⏱️ Modo Temporizador DESACTIVADO", timeUp: "¡Se acabó el tiempo!", finalScore: "Puntuación Final", difficultyBtn: "📊 Dificultad", difficultyEasy: "Fácil", difficultyMedium: "Medio", difficultyHard: "Difícil" },
-    fr: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Calcule !", submitBtn: "OK", continueBtn: "SUITE", historyTitle: "Historique", historyEmpty: "Jouez !", correctHeading: "Bravo !", incorrectHeading: "Oups !", isIndeed: "est", theAnswerWas: "C'était :", yourAnswer: "Toi", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Soustraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Classement", leaderboardTitle: "🏆 Classement", leaderboardEmpty: "Aucun score. Jouez et montez au classement!", playerName: "Nom du Joueur", score: "Score", operation: "Opération", enterName: "Entrez votre nom", saveScore: "Enregistrer Score", backBtn: "← Retour au Jeu", rank: "Rang", date: "Date", soundToggle: "🔊 Son ON", timedModeBtn: "⏱️ Mode Chrono ARRÊT", timeUp: "Temps écoulé!", finalScore: "Score Final", difficultyBtn: "📊 Difficulté", difficultyEasy: "Facile", difficultyMedium: "Moyen", difficultyHard: "Difficile" },
-    de: { dir: "ltr", correctLabel: "Richtig", incorrectLabel: "Falsch", solveThis: "Löse das!", submitBtn: "PRÜFEN", continueBtn: "WEITER", historyTitle: "Verlauf", historyEmpty: "Fang an!", correctHeading: "Super!", incorrectHeading: "Hoppla!", isIndeed: "ist", theAnswerWas: "War:", yourAnswer: "Du", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraktion", opMultiplication: "✕ Multiplikation", opDivision: "÷ Division", leaderboardBtn: "🏆 Rangliste", leaderboardTitle: "🏆 Rangliste", leaderboardEmpty: "Keine Punktzahl. Spiel und steige in die Liste auf!", playerName: "Spielername", score: "Punkte", operation: "Operation", enterName: "Gib deinen Namen ein", saveScore: "Punktzahl Speichern", backBtn: "← Zurück zum Spiel", rank: "Rang", date: "Datum", soundToggle: "🔊 Ton AN", timedModeBtn: "⏱️ Zeitmodus AUS", timeUp: "Zeit vorbei!", finalScore: "Endscore", difficultyBtn: "📊 Schwierigkeit", difficultyEasy: "Einfach", difficultyMedium: "Mittel", difficultyHard: "Schwer" },
-    ru: { dir: "ltr", correctLabel: "Верно", incorrectLabel: "Неверно", solveThis: "Реши!", submitBtn: "ОК", continueBtn: "ДАЛЕЕ", historyTitle: "История", historyEmpty: "Начни игру!", correctHeading: "Верно!", incorrectHeading: "Ой!", isIndeed: "это", theAnswerWas: "Ответ:", yourAnswer: "Твой", resultLabel: "Рез", opAddition: "➕ Сложение", opSubtraction: "➖ Вычитание", opMultiplication: "✕ Умножение", opDivision: "÷ Деление", leaderboardBtn: "🏆 Таблица Лидеров", leaderboardTitle: "🏆 Таблица Лидеров", leaderboardEmpty: "Нет результатов. Играй и поднимись в таблицу!", playerName: "Имя Игрока", score: "Очки", operation: "Операция", enterName: "Введи своё имя", saveScore: "Сохранить Результат", backBtn: "← Вернуться в Игру", rank: "Место", date: "Дата", soundToggle: "🔊 Звук ВКЛ", timedModeBtn: "⏱️ Режим Времени ВЫКЛ", timeUp: "Время истекло!", finalScore: "Финальный счёт", difficultyBtn: "📊 Сложность", difficultyEasy: "Легко", difficultyMedium: "Средне", difficultyHard: "Сложно" },
-    he: { dir: "rtl", correctLabel: "נכון", incorrectLabel: "טעות", solveThis: "פתרו!", submitBtn: "שלח", continueBtn: "המשך", historyTitle: "היסטוריה", historyEmpty: "בואו נשחק!", correctHeading: "כל הכבוד!", incorrectHeading: "אופס!", isIndeed: "זה", theAnswerWas: "התשובה:", yourAnswer: "שלך", resultLabel: "תוצאה", opAddition: "➕ חיבור", opSubtraction: "➖ חיסור", opMultiplication: "✕ כפל", opDivision: "÷ חילוק", leaderboardBtn: "🏆 לוח הדירוג", leaderboardTitle: "🏆 לוח הדירוג", leaderboardEmpty: "אין ניקוד. שחק והיות בלוח!", playerName: "שם השחקן", score: "ניקוד", operation: "פעולה", enterName: "הכנס את שמך", saveScore: "שמור ניקוד", backBtn: "← חזור למשחק", rank: "דירוג", date: "תאריך", soundToggle: "🔊 צליל ON", timedModeBtn: "⏱️ מצב זמון כבוי", timeUp: "הזמן אזל!", finalScore: "ניקוד סופי", difficultyBtn: "📊 רמת קושי", difficultyEasy: "קל", difficultyMedium: "בינוני", difficultyHard: "קשה" },
-    az: { dir: "ltr", correctLabel: "Düz", incorrectLabel: "Səhv", solveThis: "Həll et!", submitBtn: "OK", continueBtn: "DAVAM", historyTitle: "Tarixçə", historyEmpty: "Başla!", correctHeading: "Afərin!", incorrectHeading: "Vay!", isIndeed: "budur", theAnswerWas: "Cavab:", yourAnswer: "Sənin", resultLabel: "Nət", opAddition: "➕ Toplama", opSubtraction: "➖ Çıxma", opMultiplication: "✕ Vurma", opDivision: "÷ Bölmə", leaderboardBtn: "🏆 Lider Taxtası", leaderboardTitle: "🏆 Lider Taxtası", leaderboardEmpty: "Nəticə yoxdur. Oyna və lider taxtasına çıx!", playerName: "Oyunçu Adı", score: "Xal", operation: "Əməliyyat", enterName: "Adınızı daxil edin", saveScore: "Nəticəni Yadda Saxla", backBtn: "← Oyuna Qayıt", rank: "Rütbə", date: "Tarix", soundToggle: "🔊 Səs ON", timedModeBtn: "⏱️ Zaman Rejimi SOFF", timeUp: "Vaxt bitdi!", finalScore: "Son Nəticə", difficultyBtn: "📊 Çətinlik", difficultyEasy: "Asan", difficultyMedium: "Orta", difficultyHard: "Çətin" }
+    en: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Solve this!", submitBtn: "SUBMIT", continueBtn: "CONTINUE", historyTitle: "History", historyEmpty: "Start playing!", correctHeading: "Amazing!", incorrectHeading: "Oops!", isIndeed: "is", theAnswerWas: "Correct answer:", yourAnswer: "Yours", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Leaderboard", leaderboardTitle: "🏆 Leaderboard", leaderboardEmpty: "No scores yet. Play and get on the board!", playerName: "Player Name", score: "Score", operation: "Operation", enterName: "Enter your name", saveScore: "Save Score", backBtn: "← Back to Game", rank: "Rank", date: "Date", soundToggle: "🔊 Sound ON", timedModeBtn: "⏱️ Timed Mode OFF", timeUp: "Time's Up!", finalScore: "Final Score", difficultyBtn: "📊 Difficulty", difficultyEasy: "Easy", difficultyMedium: "Medium", difficultyHard: "Hard", achievementsBtn: "🎖️ Achievements", achievementsTitle: "🎖️ Achievements", achievementUnlocked: "Achievement Unlocked!", achievementsEmpty: "No achievements yet. Keep playing!", achievementLocked: "🔒 Locked", achievementProgress: "Progress" },
+    es: { dir: "ltr", correctLabel: "Correcto", incorrectLabel: "Incorrecto", solveThis: "¡Resuelve!", submitBtn: "ENVIAR", continueBtn: "CONTINUAR", historyTitle: "Historial", historyEmpty: "¡Empieza!", correctHeading: "¡Bien!", incorrectHeading: "¡Uy!", isIndeed: "es", theAnswerWas: "Era:", yourAnswer: "Tuya", resultLabel: "Res", opAddition: "➕ Suma", opSubtraction: "➖ Resta", opMultiplication: "✕ Multiplicación", opDivision: "÷ División", leaderboardBtn: "🏆 Tabla de Líderes", leaderboardTitle: "🏆 Tabla de Líderes", leaderboardEmpty: "Sin puntuaciones. ¡Juega y sube al podio!", playerName: "Nombre del Jugador", score: "Puntuación", operation: "Operación", enterName: "Ingresa tu nombre", saveScore: "Guardar Puntuación", backBtn: "← Volver al Juego", rank: "Rango", date: "Fecha", soundToggle: "🔊 Sonido ON", timedModeBtn: "⏱️ Modo Temporizador DESACTIVADO", timeUp: "¡Se acabó el tiempo!", finalScore: "Puntuación Final", difficultyBtn: "📊 Dificultad", difficultyEasy: "Fácil", difficultyMedium: "Medio", difficultyHard: "Difícil", achievementsBtn: "🎖️ Logros", achievementsTitle: "🎖️ Logros", achievementUnlocked: "¡Logro Desbloqueado!", achievementsEmpty: "Sin logros. ¡Sigue jugando!", achievementLocked: "🔒 Bloqueado", achievementProgress: "Progreso" },
+    fr: { dir: "ltr", correctLabel: "Correct", incorrectLabel: "Incorrect", solveThis: "Calcule !", submitBtn: "OK", continueBtn: "SUITE", historyTitle: "Historique", historyEmpty: "Jouez !", correctHeading: "Bravo !", incorrectHeading: "Oups !", isIndeed: "est", theAnswerWas: "C'était :", yourAnswer: "Toi", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Soustraction", opMultiplication: "✕ Multiplication", opDivision: "÷ Division", leaderboardBtn: "🏆 Classement", leaderboardTitle: "🏆 Classement", leaderboardEmpty: "Aucun score. Jouez et montez au classement!", playerName: "Nom du Joueur", score: "Score", operation: "Opération", enterName: "Entrez votre nom", saveScore: "Enregistrer Score", backBtn: "← Retour au Jeu", rank: "Rang", date: "Date", soundToggle: "🔊 Son ON", timedModeBtn: "⏱️ Mode Chrono ARRÊT", timeUp: "Temps écoulé!", finalScore: "Score Final", difficultyBtn: "📊 Difficulté", difficultyEasy: "Facile", difficultyMedium: "Moyen", difficultyHard: "Difficile", achievementsBtn: "🎖️ Succès", achievementsTitle: "🎖️ Succès", achievementUnlocked: "Succès Débloqué!", achievementsEmpty: "Pas de succès. Continuez!", achievementLocked: "🔒 Verrouillé", achievementProgress: "Progrès" },
+    de: { dir: "ltr", correctLabel: "Richtig", incorrectLabel: "Falsch", solveThis: "Löse das!", submitBtn: "PRÜFEN", continueBtn: "WEITER", historyTitle: "Verlauf", historyEmpty: "Fang an!", correctHeading: "Super!", incorrectHeading: "Hoppla!", isIndeed: "ist", theAnswerWas: "War:", yourAnswer: "Du", resultLabel: "Res", opAddition: "➕ Addition", opSubtraction: "➖ Subtraktion", opMultiplication: "✕ Multiplikation", opDivision: "÷ Division", leaderboardBtn: "🏆 Rangliste", leaderboardTitle: "🏆 Rangliste", leaderboardEmpty: "Keine Punktzahl. Spiel und steige in die Liste auf!", playerName: "Spielername", score: "Punkte", operation: "Operation", enterName: "Gib deinen Namen ein", saveScore: "Punktzahl Speichern", backBtn: "← Zurück zum Spiel", rank: "Rang", date: "Datum", soundToggle: "🔊 Ton AN", timedModeBtn: "⏱️ Zeitmodus AUS", timeUp: "Zeit vorbei!", finalScore: "Endscore", difficultyBtn: "📊 Schwierigkeit", difficultyEasy: "Einfach", difficultyMedium: "Mittel", difficultyHard: "Schwer", achievementsBtn: "🎖️ Erfolge", achievementsTitle: "🎖️ Erfolge", achievementUnlocked: "Erfolg Freigeschaltet!", achievementsEmpty: "Keine Erfolge. Spiel weiter!", achievementLocked: "🔒 Gesperrt", achievementProgress: "Fortschritt" },
+    ru: { dir: "ltr", correctLabel: "Верно", incorrectLabel: "Неверно", solveThis: "Реши!", submitBtn: "ОК", continueBtn: "ДАЛЕЕ", historyTitle: "История", historyEmpty: "Начни игру!", correctHeading: "Верно!", incorrectHeading: "Ой!", isIndeed: "это", theAnswerWas: "Ответ:", yourAnswer: "Твой", resultLabel: "Рез", opAddition: "➕ Сложение", opSubtraction: "➖ Вычитание", opMultiplication: "✕ Умножение", opDivision: "÷ Деление", leaderboardBtn: "🏆 Таблица Лидеров", leaderboardTitle: "🏆 Таблица Лидеров", leaderboardEmpty: "Нет результатов. Играй и поднимись в таблицу!", playerName: "Имя Игрока", score: "Очки", operation: "Операция", enterName: "Введи своё имя", saveScore: "Сохранить Результат", backBtn: "← Вернуться в Игру", rank: "Место", date: "Дата", soundToggle: "🔊 Звук ВКЛ", timedModeBtn: "⏱️ Режим Времени ВЫКЛ", timeUp: "Время истекло!", finalScore: "Финальный счёт", difficultyBtn: "📊 Сложность", difficultyEasy: "Легко", difficultyMedium: "Средне", difficultyHard: "Сложно", achievementsBtn: "🎖️ Достижения", achievementsTitle: "🎖️ Достижения", achievementUnlocked: "Достижение Получено!", achievementsEmpty: "Нет достижений. Продолжай!", achievementLocked: "🔒 Заблокировано", achievementProgress: "Прогресс" },
+    he: { dir: "rtl", correctLabel: "נכון", incorrectLabel: "טעות", solveThis: "פתרו!", submitBtn: "שלח", continueBtn: "המשך", historyTitle: "היסטוריה", historyEmpty: "בואו נשחק!", correctHeading: "כל הכבוד!", incorrectHeading: "אופס!", isIndeed: "זה", theAnswerWas: "התשובה:", yourAnswer: "שלך", resultLabel: "תוצאה", opAddition: "➕ חיבור", opSubtraction: "➖ חיסור", opMultiplication: "✕ כפל", opDivision: "÷ חילוק", leaderboardBtn: "🏆 לוח הדירוג", leaderboardTitle: "🏆 לוח הדירוג", leaderboardEmpty: "אין ניקוד. שחק והיות בלוח!", playerName: "שם השחקן", score: "ניקוד", operation: "פעולה", enterName: "הכנס את שמך", saveScore: "שמור ניקוד", backBtn: "← חזור למשחק", rank: "דירוג", date: "תאריך", soundToggle: "🔊 צליל ON", timedModeBtn: "⏱️ מצב זמון כבוי", timeUp: "הזמן אזל!", finalScore: "ניקוד סופי", difficultyBtn: "📊 רמת קושי", difficultyEasy: "קל", difficultyMedium: "בינוני", difficultyHard: "קשה", achievementsBtn: "🎖️ הישגים", achievementsTitle: "🎖️ הישגים", achievementUnlocked: "הישג נפתח!", achievementsEmpty: "אין הישגים. המשך!", achievementLocked: "🔒 נעול", achievementProgress: "התקדמות" },
+    az: { dir: "ltr", correctLabel: "Düz", incorrectLabel: "Səhv", solveThis: "Həll et!", submitBtn: "OK", continueBtn: "DAVAM", historyTitle: "Tarixçə", historyEmpty: "Başla!", correctHeading: "Afərin!", incorrectHeading: "Vay!", isIndeed: "budur", theAnswerWas: "Cavab:", yourAnswer: "Sənin", resultLabel: "Nət", opAddition: "➕ Toplama", opSubtraction: "➖ Çıxma", opMultiplication: "✕ Vurma", opDivision: "÷ Bölmə", leaderboardBtn: "🏆 Lider Taxtası", leaderboardTitle: "🏆 Lider Taxtası", leaderboardEmpty: "Nəticə yoxdur. Oyna və lider taxtasına çıx!", playerName: "Oyunçu Adı", score: "Xal", operation: "Əməliyyat", enterName: "Adınızı daxil edin", saveScore: "Nəticəni Yadda Saxla", backBtn: "← Oyuna Qayıt", rank: "Rütbə", date: "Tarix", soundToggle: "🔊 Səs ON", timedModeBtn: "⏱️ Zaman Rejimi SOFF", timeUp: "Vaxt bitdi!", finalScore: "Son Nəticə", difficultyBtn: "📊 Çətinlik", difficultyEasy: "Asan", difficultyMedium: "Orta", difficultyHard: "Çətin", achievementsBtn: "🎖️ Nailiyyətlər", achievementsTitle: "🎖️ Nailiyyətlər", achievementUnlocked: "Nailiyyət Açıldı!", achievementsEmpty: "Nailiyyət yoxdur. Davam et!", achievementLocked: "🔒 Kilidli", achievementProgress: "İrəliləyiş" }
 };
 
 let currentLang = 'en';
@@ -21,6 +21,24 @@ let timerInterval = null;
 let timeRemaining = 60;
 const TIMED_MODE_DURATION = 60; // 60 seconds
 let difficulty = localStorage.getItem('difficulty') || 'medium';
+let consecutiveCorrect = 0;
+let totalProblemsAnswered = 0;
+let languagesUsed = JSON.parse(localStorage.getItem('languagesUsed')) || [];
+let operationsCompleted = JSON.parse(localStorage.getItem('operationsCompleted')) || [];
+
+// Achievement definitions
+const achievementsList = [
+    { id: 'first_steps', icon: '👶', nameKey: 'First Steps', descKey: 'Solve your first problem', condition: () => totalProblemsAnswered >= 1 },
+    { id: 'fast_learner', icon: '🎯', nameKey: 'Fast Learner', descKey: 'Solve 10 problems', condition: () => totalProblemsAnswered >= 10 },
+    { id: 'math_expert', icon: '🧠', nameKey: 'Math Expert', descKey: 'Solve 50 problems', condition: () => totalProblemsAnswered >= 50 },
+    { id: 'century_club', icon: '💯', nameKey: 'Century Club', descKey: 'Solve 100 problems', condition: () => totalProblemsAnswered >= 100 },
+    { id: 'perfect_streak', icon: '⭐', nameKey: 'Perfect Streak', descKey: '10 correct answers in a row', condition: () => consecutiveCorrect >= 10 },
+    { id: 'polyglot', icon: '🌍', nameKey: 'Polyglot', descKey: 'Use all 7 languages', condition: () => languagesUsed.length >= 7 },
+    { id: 'master_of_all', icon: '🏆', nameKey: 'Master of All', descKey: 'Complete problems in all 4 operations', condition: () => operationsCompleted.length >= 4 },
+    { id: 'accuracy_king', icon: '👑', nameKey: 'Accuracy King', descKey: 'Achieve 90% accuracy over 20 problems', condition: () => totalProblemsAnswered >= 20 && (correctCount / totalProblemsAnswered) >= 0.9 }
+];
+
+let achievements = JSON.parse(localStorage.getItem('achievements')) || {};
 
 const elements = {
     viewQuestion: document.getElementById('view-question'),
@@ -54,6 +72,9 @@ function setLanguage(lang) {
     elements.gameCard.dir = config.dir;
     elements.historySection.dir = config.dir;
     elements.scoreContainer.dir = config.dir;
+
+    // Track language used for achievement
+    trackLanguageUsed(lang);
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -143,15 +164,27 @@ function checkAnswer() {
     if (isNaN(val)) return;
     const isCorrect = val === currentProblem.answer;
     addToHistory(currentProblem.a, currentProblem.b, val, currentProblem.answer, isCorrect);
+    
+    totalProblemsAnswered++;
+    
     if (isCorrect) {
         correctCount++;
+        consecutiveCorrect++;
         elements.scoreCorrect.innerText = correctCount;
         playCorrectSound();
     } else {
         incorrectCount++;
+        consecutiveCorrect = 0; // Reset streak on wrong answer
         elements.scoreIncorrect.innerText = incorrectCount;
         playIncorrectSound();
     }
+    
+    // Track operation completion
+    trackOperationCompleted(currentOperation);
+    
+    // Check for new achievements
+    checkAchievements();
+    
     updateStats();
     showResult(isCorrect);
 }
@@ -543,6 +576,85 @@ function endTimedGame() {
     };
     
     setTimeout(() => btnContinue.focus(), 10);
+}
+
+// Achievement System Functions
+function showAchievements() {
+    const modal = document.getElementById('achievements-modal');
+    modal.classList.remove('hidden');
+    renderAchievements();
+}
+
+function hideAchievements() {
+    const modal = document.getElementById('achievements-modal');
+    modal.classList.add('hidden');
+}
+
+function renderAchievements() {
+    const container = document.getElementById('achievements-container');
+    const t = translations[currentLang];
+    
+    container.innerHTML = achievementsList.map(ach => {
+        const isUnlocked = achievements[ach.id];
+        const unlockDate = isUnlocked ? new Date(isUnlocked).toLocaleDateString() : '';
+        
+        return `
+            <div class="bg-slate-800 rounded-xl p-4 border-2 ${isUnlocked ? 'border-amber-500' : 'border-slate-700'} transition-all">
+                <div class="flex items-start gap-3">
+                    <div class="text-4xl ${isUnlocked ? '' : 'grayscale opacity-30'}">${ach.icon}</div>
+                    <div class="flex-1">
+                        <h3 class="font-black text-lg ${isUnlocked ? 'text-amber-400' : 'text-slate-500'}">${ach.nameKey}</h3>
+                        <p class="text-sm text-slate-400 mb-2">${ach.descKey}</p>
+                        ${isUnlocked 
+                            ? `<p class="text-xs text-amber-500 font-bold">✓ Unlocked ${unlockDate}</p>` 
+                            : `<p class="text-xs text-slate-600">${t.achievementLocked}</p>`
+                        }
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function checkAchievements() {
+    achievementsList.forEach(ach => {
+        if (!achievements[ach.id] && ach.condition()) {
+            unlockAchievement(ach.id, ach.nameKey);
+        }
+    });
+}
+
+function unlockAchievement(id, name) {
+    achievements[id] = Date.now();
+    localStorage.setItem('achievements', JSON.stringify(achievements));
+    showAchievementNotification(name);
+    playCorrectSound(); // Play a celebratory sound
+}
+
+function showAchievementNotification(name) {
+    const notification = document.getElementById('achievement-notification');
+    const textEl = document.getElementById('achievement-notification-text');
+    
+    textEl.textContent = name;
+    notification.classList.remove('hidden');
+    
+    setTimeout(() => {
+        notification.classList.add('hidden');
+    }, 4000);
+}
+
+function trackLanguageUsed(lang) {
+    if (!languagesUsed.includes(lang)) {
+        languagesUsed.push(lang);
+        localStorage.setItem('languagesUsed', JSON.stringify(languagesUsed));
+    }
+}
+
+function trackOperationCompleted(operation) {
+    if (!operationsCompleted.includes(operation)) {
+        operationsCompleted.push(operation);
+        localStorage.setItem('operationsCompleted', JSON.stringify(operationsCompleted));
+    }
 }
 
 window.onload = () => { 

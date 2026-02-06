@@ -21,6 +21,10 @@ A sleek, interactive math game designed for primary school students to practice 
 - **🕐 Adaptive Difficulty**: Random problem generation with configurable ranges
 - **📱 Touch-Friendly**: Optimized for touch input on mobile devices
 - **🔊 Sound Effects & Music**: Engaging audio feedback for correct/incorrect answers with toggle control
+- **🏆 Leaderboard System**: Track high scores and compete with yourself
+- **⏱️ Timed Challenges**: 60-second countdown mode for speed practice
+- **🎖️ Achievement Badges**: Unlock rewards for various milestones and challenges
+- **📊 Difficulty Levels**: Choose between Easy, Medium, and Hard modes
 
 ## 🚀 Quick Start
 
@@ -153,6 +157,15 @@ The game adapts beautifully to any screen size:
 - 🔄 **Quick Restart**: Play another timed round with one click
 - 🌐 **Multilingual**: All timed mode text fully translated to 7 languages
 
+### Achievement Badges
+- 🎖️ **Achievement System**: Unlock badges by completing various challenges
+- 🏆 **8 Unique Achievements**: Including First Steps, Fast Learner, Math Expert, Century Club, Perfect Streak, Polyglot, Master of All, and Accuracy King
+- 🔔 **Real-time Notifications**: Celebratory popup when you unlock a new achievement
+- 📊 **Progress Tracking**: View all achievements (locked and unlocked) in the dedicated modal
+- 💾 **Persistent Storage**: Your achievements are saved in browser localStorage
+- 🎯 **Diverse Goals**: Achievements reward different play styles - solve problems, maintain streaks, explore operations, and try all languages
+- 🌐 **Multilingual**: All achievement names and descriptions translated to 7 languages
+
 ## 🔧 Customization
 
 Want to customize the difficulty or appearance? Here are some key modifications:
@@ -217,10 +230,10 @@ Potential features to add:
 - 🏆 Leaderboard system (✅ **COMPLETED**)
 - 📊 Statistics dashboard with performance tracking
 - ⏱️ Timed challenges (✅ **COMPLETED**)
-- 🎖️ Achievement badges
+- 🎖️ Achievement badges (✅ **COMPLETED**)
 - 🎵 Sound effects and background music (✅ **COMPLETED**)
 - 💾 Save/load game progress
-- 📈 Difficulty levels (Easy, Medium, Hard)
+- 📈 Difficulty levels (Easy, Medium, Hard) (✅ **COMPLETED**)
 - 🤖 AI opponent mode
 
 ## 📞 Contact & Support
