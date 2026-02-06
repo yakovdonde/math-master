@@ -12,6 +12,21 @@
 
     <!-- Header Section -->
     <header class="w-full max-w-md mx-auto space-y-3 flex-none">
+        <!-- Top Buttons Row -->
+        <div class="flex items-center justify-between gap-2 min-w-0">
+            <button onclick="showLeaderboard()" data-i18n="leaderboardBtn" class="px-2 py-2 rounded-lg text-xs font-bold transition-colors bg-amber-600 hover:bg-amber-500 text-white whitespace-nowrap flex-shrink-0">🏆 Leaderboard</button>
+            <button onclick="toggleSound()" id="sound-toggle-btn" data-i18n="soundToggle" class="px-2 py-2 rounded-lg text-xs font-bold transition-colors bg-green-600 hover:bg-green-500 text-white whitespace-nowrap flex-shrink-0">🔊 Sound ON</button>
+            <div class="relative group flex-shrink-0">
+                <button id="difficulty-btn" data-i18n="difficultyBtn" class="px-2 py-2 rounded-lg text-xs font-bold transition-colors bg-purple-600 hover:bg-purple-500 text-white whitespace-nowrap">📊 Difficulty</button>
+                <div id="difficulty-menu" class="hidden absolute right-0 mt-2 w-32 bg-slate-700 rounded-lg shadow-lg z-50">
+                    <button onclick="setDifficulty('easy')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 rounded-t-lg" data-i18n="difficultyEasy">Easy</button>
+                    <button onclick="setDifficulty('medium')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600" data-i18n="difficultyMedium">Medium</button>
+                    <button onclick="setDifficulty('hard')" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-600 border-t border-slate-600 rounded-b-lg" data-i18n="difficultyHard">Hard</button>
+                </div>
+            </div>
+            <button onclick="toggleTimedMode()" id="timed-mode-btn" data-i18n="timedModeBtn" class="px-2 py-2 rounded-lg text-xs font-bold transition-colors bg-slate-700 hover:bg-slate-600 text-white whitespace-nowrap flex-shrink-0">⏱️ Timed Mode OFF</button>
+        </div>
+        
         <!-- Operation Selector -->
         <div class="flex flex-wrap justify-center gap-2">
             <button onclick="setOperation('addition')" class="op-btn px-4 py-2 rounded-lg text-sm font-bold transition-colors bg-slate-700" data-operation="addition" data-i18n-op="opAddition">➕ Add</button>
@@ -50,6 +65,12 @@
         <!-- Question View -->
         <div id="view-question" class="space-y-4">
             <h1 data-i18n="solveThis" class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Solve this!</h1>
+            
+            <!-- Timer Display (Hidden by default) -->
+            <div id="timer-display" class="hidden text-5xl font-black game-font text-yellow-400 mb-2">
+                <span id="timer-seconds">60</span>s
+            </div>
+            
             <div id="equation" dir="ltr" class="adaptive-text game-font text-white leading-none">7 × 8</div>
             
             <input type="number" id="answer-input" 
@@ -75,6 +96,22 @@
 
     <!-- Bottom History Area (Flexible height) -->
     <section id="history-section" class="w-full max-w-md mx-auto flex flex-col min-h-0 flex-1 overflow-hidden">
+        <!-- Statistics Bar -->
+        <div id="stats-bar" class="grid grid-cols-3 gap-2 mb-3 px-2">
+            <div class="bg-indigo-900/50 p-2 rounded-lg text-center">
+                <p class="text-[10px] text-indigo-300 font-bold uppercase">Accuracy</p>
+                <p id="accuracy-display" class="text-lg font-black text-indigo-400">--%</p>
+            </div>
+            <div class="bg-blue-900/50 p-2 rounded-lg text-center">
+                <p class="text-[10px] text-blue-300 font-bold uppercase">Total</p>
+                <p id="total-display" class="text-lg font-black text-blue-400">0</p>
+            </div>
+            <div class="bg-purple-900/50 p-2 rounded-lg text-center">
+                <p class="text-[10px] text-purple-300 font-bold uppercase">Difficulty</p>
+                <p id="difficulty-display" class="text-lg font-black text-purple-400" data-i18n="difficultyMedium">Medium</p>
+            </div>
+        </div>
+
         <h3 class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-2 flex items-center px-2 flex-none">
             <span class="mr-2">🕒</span> <span data-i18n="historyTitle">History</span>
         </h3>
@@ -83,8 +120,34 @@
         </div>
     </section>
 
+    <!-- Leaderboard Modal (Hidden by default) -->
+    <div id="leaderboard-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-slate-900 rounded-[2.5rem] p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto border-b-4 border-slate-800">
+            <!-- Leaderboard Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 data-i18n="leaderboardTitle" class="text-3xl font-black game-font text-indigo-400">Top Players</h2>
+                <button onclick="hideLeaderboard()" class="text-slate-400 hover:text-white text-2xl">✕</button>
+            </div>
+
+            <!-- Save Score Section -->
+            <div id="save-score-section" class="mb-6 p-4 bg-slate-800 rounded-xl">
+                <p class="text-slate-300 text-sm mb-3" data-i18n="enterName">Enter your name</p>
+                <div class="flex gap-2">
+                    <input type="text" id="player-name-input" maxlength="20" placeholder="Name" class="flex-1 bg-slate-700 border-2 border-slate-600 rounded-lg p-2 text-white focus:outline-none focus:border-indigo-500">
+                    <button onclick="saveCurrentScore()" data-i18n="saveScore" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-white font-bold">Save</button>
+                </div>
+            </div>
+
+            <!-- Leaderboard Table -->
+            <div id="leaderboard-container" class="space-y-2">
+                <p id="leaderboard-empty" data-i18n="leaderboardEmpty" class="text-slate-600 italic text-center text-sm py-8">No scores yet. Play and get on the board!</p>
+            </div>
+
+            <!-- Back Button -->
+            <button onclick="hideLeaderboard()" data-i18n="backBtn" class="w-full mt-6 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold">← Back to Game</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
-</html>
 </body>
 </html>

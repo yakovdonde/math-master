@@ -60,3 +60,54 @@ input::-webkit-inner-spin-button {
 .op-btn:hover:not(.active) {
     background-color: #64748b;
 }
+
+/* Language buttons - fixed width to prevent movement */
+.lang-btn {
+    width: 2.5rem;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 2px;
+        gap: 2px;
+    }
+    
+    header {
+        gap: 6px !important;
+    }
+    
+    header > div:first-child {
+        gap: 4px !important;
+    }
+    
+    header > div:first-child button {
+        padding: 0.5rem 0.5rem !important;
+        font-size: 0.65rem !important;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    #score-container {
+        gap: 4px !important;
+    }
+    
+    #score-container > div {
+        padding: 0.5rem !important;
+        gap: 6px !important;
+    }
+    
+    #score-container span:last-child {
+        font-size: 1rem !important;
+    }
+    
+    .adaptive-text {
+        font-size: clamp(2rem, 10vh, 5rem) !important;
+    }
+    
+    #game-card {
+        padding: 1.25rem !important;
+        border-radius: 1.5rem !important;
+    }
+}

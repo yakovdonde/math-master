@@ -20,6 +20,7 @@ A sleek, interactive math game designed for primary school students to practice 
 - **🎨 Modern UI**: Clean, vibrant design with smooth animations using Tailwind CSS
 - **🕐 Adaptive Difficulty**: Random problem generation with configurable ranges
 - **📱 Touch-Friendly**: Optimized for touch input on mobile devices
+- **🔊 Sound Effects & Music**: Engaging audio feedback for correct/incorrect answers with toggle control
 
 ## 🚀 Quick Start
 
@@ -133,6 +134,23 @@ The game adapts beautifully to any screen size:
 - ❌ Incorrect answers show the correct solution
 - Color-coded visual feedback (green/red)
 
+### Sound Effects & Music
+- 🔊 **Toggle Control**: Sound ON/OFF button in header (green when ON, red when OFF)
+- 🎵 **Correct Answer Sound**: Pleasant ascending chord (C5-E5-G5) celebrates right answers
+- 📢 **Incorrect Answer Sound**: Dramatic sawtooth buzz that emphasizes wrong answers
+- 🎶 **Background Music**: Optional upbeat melody to enhance gameplay
+- 📱 **Persistent Preference**: Sound preference saved in browser localStorage
+- 🌐 **Multilingual Labels**: Sound toggle button text updates with language selection
+
+### Timed Challenges
+- ⏱️ **Timed Mode Toggle**: Turn timed challenges ON/OFF with dedicated button (blue when active, gray when inactive)
+- 📈 **60-Second Countdown**: Solve as many problems as possible within the time limit
+- 🎨 **Dynamic Timer Display**: Yellow countdown timer above the equation, turns red when 10 seconds remain
+- 🏁 **Game End**: Automatic game over when timer reaches zero with final score display
+- 💾 **Persistent Mode**: Timed mode preference saved in browser localStorage
+- 🔄 **Quick Restart**: Play another timed round with one click
+- 🌐 **Multilingual**: All timed mode text fully translated to 7 languages
+
 ## 🔧 Customization
 
 Want to customize the difficulty or appearance? Here are some key modifications:
@@ -194,11 +212,11 @@ This demonstrates:
 ## 🚀 Future Enhancements
 
 Potential features to add:
-- 🏆 Leaderboard system
+- 🏆 Leaderboard system (✅ **COMPLETED**)
 - 📊 Statistics dashboard with performance tracking
-- ⏱️ Timed challenges
+- ⏱️ Timed challenges (✅ **COMPLETED**)
 - 🎖️ Achievement badges
-- 🎵 Sound effects and background music
+- 🎵 Sound effects and background music (✅ **COMPLETED**)
 - 💾 Save/load game progress
 - 📈 Difficulty levels (Easy, Medium, Hard)
 - 🤖 AI opponent mode
