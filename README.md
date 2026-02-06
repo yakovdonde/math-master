@@ -166,6 +166,27 @@ The game adapts beautifully to any screen size:
 - 🎯 **Diverse Goals**: Achievements reward different play styles - solve problems, maintain streaks, explore operations, and try all languages
 - 🌐 **Multilingual**: All achievement names and descriptions translated to 7 languages
 
+### Statistics Dashboard
+- 📈 **Performance Analytics**: Comprehensive statistics dashboard showing your progress and performance metrics
+- 📊 **Overall Statistics**:
+  - Total Problems Solved: Cumulative count of all problems attempted
+  - Current Streak: Consecutive correct answers in the current session
+  - Best Streak: All-time best consecutive correct answers
+  - Overall Accuracy: Percentage of correct answers across all sessions
+- 🔍 **By Operation Analysis**: Performance breakdown for each operation (Addition, Subtraction, Multiplication, Division)
+  - Problems solved per operation
+  - Accuracy percentage per operation
+  - Visual progress bars showing relative performance
+- 📚 **By Difficulty Analysis**: Performance breakdown by difficulty level (Easy, Medium, Hard)
+  - Problems solved per difficulty
+  - Accuracy percentage per difficulty
+  - Color-coded progress bars for quick visualization
+- ⏱️ **Time Tracking**:
+  - Total Time Played: Cumulative time spent solving problems
+  - Average Time Per Problem: Calculate your speed improvements
+- 💾 **Persistent History**: All statistics are saved in browser localStorage across sessions
+- 🌐 **Multilingual**: All statistics labels and units translated to 7 languages
+
 ## 🔧 Customization
 
 Want to customize the difficulty or appearance? Here are some key modifications:
