@@ -25,6 +25,7 @@ A sleek, interactive math game designed for primary school students to practice 
 - **⏱️ Timed Challenges**: 60-second countdown mode for speed practice
 - **🎖️ Achievement Badges**: Unlock rewards for various milestones and challenges
 - **📊 Difficulty Levels**: Choose between Easy, Medium, and Hard modes
+- **💾 Auto-Save/Load**: Automatic game progress saving and restoration
 
 ## 🚀 Quick Start
 
