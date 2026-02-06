@@ -16,6 +16,7 @@
         <div class="flex items-center gap-2 min-w-0">
             <button onclick="showLeaderboard()" data-i18n="leaderboardBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-amber-600 hover:bg-amber-500 text-white truncate">🏆 Leaderboard</button>
             <button onclick="showAchievements()" data-i18n="achievementsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-indigo-600 hover:bg-indigo-500 text-white truncate">🎖️ Achievements</button>
+            <button onclick="showStatistics()" data-i18n="statsBtn" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-teal-600 hover:bg-teal-500 text-white truncate">📈 Statistics</button>
             <button onclick="toggleSound()" id="sound-toggle-btn" data-i18n="soundToggle" class="flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate">🔊 Sound ON</button>
             <div class="relative group flex-1">
                 <button id="difficulty-btn" data-i18n="difficultyBtn" class="w-full px-3 py-3 rounded-lg text-base font-bold transition-colors bg-purple-600 hover:bg-purple-500 text-white truncate">📊 Difficulty</button>
@@ -165,6 +166,68 @@
 
             <!-- Back Button -->
             <button onclick="hideAchievements()" data-i18n="backBtn" class="w-full mt-6 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold">← Back to Game</button>
+        </div>
+    </div>
+
+    <!-- Statistics Modal (Hidden by default) -->
+    <div id="statistics-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-slate-900 rounded-[2.5rem] p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto border-b-4 border-slate-800">
+            <!-- Statistics Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 data-i18n="statsTitle" class="text-3xl font-black game-font text-teal-400">📈 Performance Statistics</h2>
+                <button onclick="hideStatistics()" class="text-slate-400 hover:text-white text-2xl">✕</button>
+            </div>
+
+            <!-- Overall Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="totalProblems">Total Problems</div>
+                    <div id="stat-total-problems" class="text-3xl font-black text-white">0</div>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="currentStreak">Current Streak</div>
+                    <div id="stat-current-streak" class="text-3xl font-black text-green-400">0</div>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="bestStreak">Best Streak</div>
+                    <div id="stat-best-streak" class="text-3xl font-black text-amber-400">0</div>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="overallAccuracy">Overall Accuracy</div>
+                    <div id="stat-accuracy" class="text-3xl font-black text-teal-400">0%</div>
+                </div>
+            </div>
+
+            <!-- By Operation -->
+            <div class="mb-6">
+                <h3 class="text-xl font-black text-teal-300 mb-3" data-i18n="byOperation">By Operation</h3>
+                <div id="stats-by-operation" class="space-y-2">
+                    <!-- Operation stats will be inserted here -->
+                </div>
+            </div>
+
+            <!-- By Difficulty -->
+            <div class="mb-6">
+                <h3 class="text-xl font-black text-teal-300 mb-3" data-i18n="byDifficulty">By Difficulty</h3>
+                <div id="stats-by-difficulty" class="space-y-2">
+                    <!-- Difficulty stats will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Time Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="totalTime">Total Time Played</div>
+                    <div id="stat-total-time" class="text-2xl font-black text-white">0 <span data-i18n="seconds" class="text-base">seconds</span></div>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-4">
+                    <div class="text-slate-400 text-sm mb-1" data-i18n="avgTimePerProblem">Avg Time / Problem</div>
+                    <div id="stat-avg-time" class="text-2xl font-black text-white">0 <span data-i18n="seconds" class="text-base">seconds</span></div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <button onclick="hideStatistics()" data-i18n="backBtn" class="w-full bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold">← Back to Game</button>
         </div>
     </div>
 
