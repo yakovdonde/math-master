@@ -1031,47 +1031,31 @@ function renderStatistics() {
     document.getElementById('stat-avg-time').innerHTML = `${displayAvgTime} <span data-i18n="seconds" class="text-base">${t.seconds}</span>`;
 }
 
-// Reset Game Function
+// Reset Game Function (Resets only current session, keeps leaderboard, achievements, and statistics)
 function resetGame() {
     const t = translations[currentLang];
     const confirmMessage = t.resetConfirm || "Are you sure? This will clear all progress!";
     
     if (confirm(confirmMessage)) {
-        // Clear all localStorage data
-        localStorage.clear();
-        
-        // Reset all global variables to initial state
-        currentLang = 'en';
-        currentOperation = 'multiplication';
+        // Reset current session data only
         correctCount = 0;
         incorrectCount = 0;
         currentProblem = { a: 0, b: 0, answer: 0, operation: '', display: '' };
-        leaderboard = [];
         gameHistory = [];
-        soundEnabled = true;
-        timedModeEnabled = false;
-        timeRemaining = 60;
-        difficulty = 'medium';
         consecutiveCorrect = 0;
-        totalProblemsAnswered = 0;
-        languagesUsed = [];
-        operationsCompleted = [];
-        bestStreak = 0;
-        totalTimePlayed = 0;
-        achievements = {};
-        operationStats = {
-            addition: { total: 0, correct: 0 },
-            subtraction: { total: 0, correct: 0 },
-            multiplication: { total: 0, correct: 0 },
-            division: { total: 0, correct: 0 }
-        };
-        difficultyStats = {
-            easy: { total: 0, correct: 0 },
-            medium: { total: 0, correct: 0 },
-            hard: { total: 0, correct: 0 }
-        };
         
-        // Reload the page to refresh the entire UI
-        location.reload();
+        // Update UI elements
+        elements.scoreCorrect.innerText = '0';
+        elements.scoreIncorrect.innerText = '0';
+        elements.historyContainer.innerHTML = '';
+        elements.historyEmpty.classList.remove('hidden');
+        updateStats();
+        generateProblem();
+        
+        // Save the reset state (clears session data but keeps persistent data)
+        saveGameProgress();
+        
+        // Show confirmation (optional - you can comment this out if you don't want a second message)
+        // No need to reload - just update the UI
     }
 }
