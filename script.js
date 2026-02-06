@@ -515,8 +515,7 @@ function setDifficulty(level) {
 function updateDifficultyButton() {
     const btn = document.getElementById('difficulty-btn');
     const t = translations[currentLang];
-    const levelKey = `difficulty${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}`;
-    btn.innerHTML = `📊 ${t[levelKey]}`;
+    btn.innerHTML = t.difficultyBtn;
 }
 
 function closeDifficultyMenu() {
