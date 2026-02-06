@@ -120,6 +120,9 @@ function setLanguage(lang) {
     if (!document.getElementById('leaderboard-modal').classList.contains('hidden')) {
         displayLeaderboard();
     }
+    
+    // Save game progress when language changes
+    saveGameProgress();
 }
 
 function setOperation(operation) {
@@ -132,6 +135,7 @@ function setOperation(operation) {
         }
     });
     generateProblem();
+    saveGameProgress();
 }
 
 function generateProblem() {
@@ -232,6 +236,10 @@ function checkAnswer() {
     checkAchievements();
     
     updateStats();
+    
+    // Save game progress after each answer
+    saveGameProgress();
+    
     showResult(isCorrect);
 }
 
@@ -501,6 +509,7 @@ function toggleTimedMode() {
     } else {
         stopTimer();
     }
+    saveGameProgress();
 }
 
 // Difficulty Functions
@@ -510,6 +519,7 @@ function setDifficulty(level) {
     updateDifficultyButton();
     closeDifficultyMenu();
     generateProblem();
+    saveGameProgress();
 }
 
 function updateDifficultyButton() {
@@ -700,15 +710,89 @@ function trackOperationCompleted(operation) {
     }
 }
 
+// Save/Load Game Progress
+function saveGameProgress() {
+    const gameState = {
+        currentLang,
+        currentOperation,
+        correctCount,
+        incorrectCount,
+        currentProblem,
+        difficulty,
+        consecutiveCorrect,
+        totalProblemsAnswered,
+        languagesUsed,
+        operationsCompleted,
+        bestStreak,
+        totalTimePlayed,
+        operationStats,
+        difficultyStats,
+        achievements,
+        soundEnabled,
+        timedModeEnabled,
+        timestamp: Date.now()
+    };
+    localStorage.setItem('gameProgress', JSON.stringify(gameState));
+}
+
+function loadGameProgress() {
+    const savedState = localStorage.getItem('gameProgress');
+    if (!savedState) return false;
+    
+    try {
+        const gameState = JSON.parse(savedState);
+        
+        // Restore all game state variables
+        currentLang = gameState.currentLang || 'en';
+        currentOperation = gameState.currentOperation || 'multiplication';
+        correctCount = gameState.correctCount || 0;
+        incorrectCount = gameState.incorrectCount || 0;
+        currentProblem = gameState.currentProblem || { a: 0, b: 0, answer: 0, operation: '', display: '' };
+        difficulty = gameState.difficulty || 'medium';
+        consecutiveCorrect = gameState.consecutiveCorrect || 0;
+        totalProblemsAnswered = gameState.totalProblemsAnswered || 0;
+        languagesUsed = gameState.languagesUsed || [];
+        operationsCompleted = gameState.operationsCompleted || [];
+        bestStreak = gameState.bestStreak || 0;
+        totalTimePlayed = gameState.totalTimePlayed || 0;
+        operationStats = gameState.operationStats || {
+            addition: { total: 0, correct: 0 },
+            subtraction: { total: 0, correct: 0 },
+            multiplication: { total: 0, correct: 0 },
+            division: { total: 0, correct: 0 }
+        };
+        difficultyStats = gameState.difficultyStats || {
+            easy: { total: 0, correct: 0 },
+            medium: { total: 0, correct: 0 },
+            hard: { total: 0, correct: 0 }
+        };
+        achievements = gameState.achievements || {};
+        soundEnabled = gameState.soundEnabled !== false;
+        timedModeEnabled = gameState.timedModeEnabled !== false;
+        
+        // Update UI elements with restored values
+        elements.scoreCorrect.innerText = correctCount;
+        elements.scoreIncorrect.innerText = incorrectCount;
+        
+        return true;
+    } catch (e) {
+        console.error('Error loading game progress:', e);
+        return false;
+    }
+}
+
 window.onload = () => { 
-    setLanguage('en'); 
+    // Try to load saved game progress
+    const progressLoaded = loadGameProgress();
+    
+    setLanguage(currentLang); 
     generateProblem();
     initAudioContext();
     updateTimedModeButton();
     updateDifficultyButton();
     
     const soundBtn = document.getElementById('sound-toggle-btn');
-    const t = translations['en'];
+    const t = translations[currentLang];
     if (soundEnabled) {
         soundBtn.textContent = t.soundToggle.replace('OFF', 'ON');
         soundBtn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-green-600 hover:bg-green-500 text-white truncate';
@@ -716,6 +800,9 @@ window.onload = () => {
         soundBtn.textContent = t.soundToggle.replace('ON', 'OFF');
         soundBtn.className = 'flex-1 px-3 py-3 rounded-lg text-base font-bold transition-colors bg-red-600 hover:bg-red-500 text-white truncate';
     }
+    
+    // Auto-save game progress periodically
+    setInterval(saveGameProgress, 5000); // Save every 5 seconds
 };
 // Statistics Functions
 function showStatistics() {
