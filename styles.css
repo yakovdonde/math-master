@@ -1,18 +1,19 @@
 html {
     height: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #0f172a;
     color: white;
-    touch-action: manipulation;
     min-height: 100dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 .game-font {
