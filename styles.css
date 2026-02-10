@@ -115,11 +115,16 @@ header > div:first-child > .relative > button {
         gap: 4px !important;
     }
     
-    header > div:first-child button {
+    header > div:first-child button,
+    header > div:first-child .relative {
         padding: 0.6rem 0.75rem !important;
         font-size: 0.85rem !important;
         flex: 1 1 140px;
         min-width: 0;
+    }
+    
+    header > div:first-child .relative {
+        padding: 0 !important;
     }
     
     #score-container {
