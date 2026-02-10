@@ -48,6 +48,14 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
 }
 
+#history-section {
+    overflow: visible;
+}
+
+#history-container {
+    overflow: visible;
+}
+
 /* Fluid typography */
 .adaptive-text {
     font-size: clamp(2.5rem, 12vw, 6rem);
