@@ -91,6 +91,15 @@ header > div > .lang-btn {
     min-width: 52px;
 }
 
+/* Ensure difficulty dropdown container and button match other buttons */
+header > div:first-child > .relative {
+    display: flex;
+}
+
+header > div:first-child > .relative > button {
+    flex: 1;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     body {
