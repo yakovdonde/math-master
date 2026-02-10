@@ -1,12 +1,18 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #0f172a;
     color: white;
     touch-action: manipulation;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevent body scroll */
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
 }
 
 .game-font {
@@ -44,7 +50,7 @@ input::-webkit-inner-spin-button {
 
 /* Fluid typography */
 .adaptive-text {
-    font-size: clamp(3rem, 12vh, 7rem);
+    font-size: clamp(2.5rem, 12vw, 6rem);
 }
 
 /* Operation buttons */
@@ -67,11 +73,23 @@ input::-webkit-inner-spin-button {
     text-align: center;
 }
 
+header > div {
+    flex-wrap: wrap;
+}
+
+header > div > * {
+    min-width: 140px;
+}
+
+header > div > .lang-btn {
+    min-width: 52px;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     body {
-        padding: 2px;
-        gap: 2px;
+        padding: 10px;
+        gap: 10px;
     }
     
     header {
@@ -83,9 +101,9 @@ input::-webkit-inner-spin-button {
     }
     
     header > div:first-child button {
-        padding: 0.5rem 0.5rem !important;
-        font-size: 0.65rem !important;
-        flex: 1;
+        padding: 0.6rem 0.75rem !important;
+        font-size: 0.85rem !important;
+        flex: 1 1 140px;
         min-width: 0;
     }
     
@@ -103,11 +121,36 @@ input::-webkit-inner-spin-button {
     }
     
     .adaptive-text {
-        font-size: clamp(2rem, 10vh, 5rem) !important;
+        font-size: clamp(2.25rem, 14vw, 5rem) !important;
     }
     
     #game-card {
         padding: 1.25rem !important;
         border-radius: 1.5rem !important;
+    }
+
+    #answer-input {
+        font-size: clamp(1.75rem, 6vw, 2.75rem) !important;
+        padding: 0.9rem !important;
+    }
+
+    #view-question button,
+    #view-result button {
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+        padding: 0.9rem !important;
+    }
+}
+
+@media (max-width: 520px) {
+    header > div > * {
+        min-width: 120px;
+    }
+
+    header > div > .lang-btn {
+        min-width: 44px;
+    }
+
+    #score-container > div {
+        padding: 0.6rem !important;
     }
 }
