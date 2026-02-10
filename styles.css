@@ -1,6 +1,5 @@
 html {
     height: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -8,12 +7,10 @@ body {
     background-color: #0f172a;
     color: white;
     min-height: 100dvh;
-    height: auto;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
+    overflow-y: visible;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .game-font {
